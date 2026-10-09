@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Passario Art of Hair</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: editorial salon — preview ribbon, split hero with the real salon photo, credentials strip, services, booking mock, gallery of real photos, hours + visit, footer. */
+:root{
+  --ink:#1A1414; --bone:#F4EFE8; --paper:#FBF8F3; --oxblood:#7E2A33; --oxblood-2:#9B3A44; --muted:#6E6461; --line:#E2D9CF; --gold-dim:#B08D57;
+  --f-display:"Bodoni Moda", Didot, Georgia, serif; --f-body:"Figtree", "Segoe UI", system-ui, sans-serif;
+  color-scheme:light;
+}
+html,body{background:var(--paper);color:var(--ink)}
+body{font-family:var(--f-body);font-size:16px;line-height:1.55}
+*{box-sizing:border-box}
+h1,h2,h3{font-family:var(--f-display);font-weight:500;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+a{color:var(--oxblood)}
+:focus-visible{outline:2px solid var(--oxblood);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--oxblood);font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer;font:inherit;font-weight:600}
+.btn.solid{background:var(--oxblood);border-color:var(--oxblood);color:#fff}
+.btn.solid:hover{background:var(--oxblood-2)}
+.btn:hover{border-color:var(--oxblood)}
+
+.ribbon{background:var(--ink);color:#EDE4DA;font-size:13px;text-align:center;padding:9px 16px}
+.ribbon b{color:#fff}
+
+header.top{border-bottom:1px solid var(--line);background:var(--paper)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;flex-wrap:wrap}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:var(--f-display);font-size:28px;font-weight:700;letter-spacing:.02em}
+.logo span{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+nav.links{display:flex;gap:22px;flex-wrap:wrap;font-size:14px}
+nav.links a{color:var(--ink);text-decoration:none}
+nav.links a:hover{color:var(--oxblood)}
+
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,5vw,64px);align-items:center;padding-block:clamp(36px,6vw,72px)}
+.hero h1{font-size:clamp(40px,6.4vw,78px);line-height:1.02}
+.hero h1 em{color:var(--oxblood);font-style:italic}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:48ch;margin-top:20px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero figure{margin:0;position:relative}
+.hero figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:220px 220px 18px 18px;display:block;background:var(--bone)}
+.hero figure figcaption{position:absolute;left:-14px;bottom:28px;background:var(--paper);border:1px solid var(--line);padding:12px 16px;border-radius:12px;font-size:13px;box-shadow:0 10px 30px rgba(26,20,20,.08)}
+.hero figure figcaption b{font-family:var(--f-display);font-size:22px;display:block}
+@media (max-width:820px){.hero{grid-template-columns:1fr}.hero figure figcaption{left:12px}}
+
+.creds{background:var(--bone);border-block:1px solid var(--line)}
+.creds .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-block:28px}
+.cred b{font-family:var(--f-display);font-size:30px;display:block;line-height:1.1}
+.cred span{font-size:14px;color:var(--muted)}
+@media (max-width:820px){.creds .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+section.block{padding-block:clamp(48px,7vw,88px)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:32px}
+.head h2{font-size:clamp(32px,4.4vw,52px);line-height:1.05;max-width:18ch}
+.head p{color:var(--muted);max-width:44ch}
+
+.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.svc{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.svc h3{font-size:22px}
+.svc .price{font-variant-numeric:tabular-nums;color:var(--muted);align-self:center}
+.svc p{grid-column:1/-1;color:var(--muted);font-size:15px}
+@media (max-width:820px){.services{grid-template-columns:1fr}}
+.note{font-size:13px;color:var(--muted);margin-top:16px}
+
+.book{background:var(--ink);color:#F2EBE3;border-radius:28px;padding:clamp(24px,4vw,48px);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px)}
+.book h2{font-size:clamp(30px,4vw,46px);color:#fff}
+.book p{color:#CFC3B8}
+.book .steps{display:grid;gap:14px;margin-top:22px;font-size:15px}
+.book .steps div{display:flex;gap:12px;align-items:baseline}
+.book .steps i{font-style:normal;font-family:var(--f-display);color:var(--gold-dim);font-size:20px;min-width:24px}
+.form{background:#231B1B;border:1px solid #3A2E2D;border-radius:20px;padding:22px;display:grid;gap:16px}
+.form label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#BFB2A6;display:block;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid #4A3B39;background:transparent;color:#F2EBE3;border-radius:999px;padding:9px 14px;cursor:pointer;font:inherit;font-size:14px}
+.chip[aria-pressed="true"]{background:#F2EBE3;color:var(--ink);border-color:#F2EBE3}
+.summary{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;border-top:1px solid #3A2E2D;padding-top:16px;font-size:14px;color:#CFC3B8}
+.summary b{color:#fff}
+.form .btn.solid{width:100%}
+.done{display:none;background:#2E3B2F;color:#DDEBDD;padding:12px;border-radius:12px;font-size:14px}
+.done.show{display:block}
+@media (max-width:900px){.book{grid-template-columns:1fr}}
+
+.gallery{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:auto auto;gap:14px}
+.gallery figure{margin:0;border-radius:16px;overflow:hidden;background:var(--bone);position:relative}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;min-height:220px}
+.gallery figcaption{position:absolute;left:12px;bottom:12px;background:rgba(251,248,243,.92);padding:6px 10px;border-radius:8px;font-size:13px}
+.gallery .tall{grid-row:span 2}
+.gallery .quote{background:var(--oxblood);color:#fff;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;border-radius:16px}
+.gallery .quote p{font-family:var(--f-display);font-size:24px;line-height:1.2;font-style:italic}
+.gallery .quote span{font-size:13px;opacity:.85}
+@media (max-width:820px){.gallery{grid-template-columns:1fr 1fr}.gallery .tall{grid-row:auto;grid-column:1/-1}}
+@media (max-width:520px){.gallery{grid-template-columns:1fr}}
+
+.visit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.card{border:1px solid var(--line);border-radius:18px;padding:24px;background:#fff}
+.card h3{font-size:22px;margin-bottom:12px}
+table.hours{width:100%;border-collapse:collapse;font-size:15px}
+table.hours td{padding:6px 0;border-bottom:1px dashed var(--line)}
+table.hours td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+table.hours tr.closed td:last-child{color:var(--muted)}
+@media (max-width:900px){.visit{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);margin-top:24px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:28px;font-size:14px;color:var(--muted)}
+.made{background:var(--bone);border-top:1px solid var(--line)}
+.made .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;font-size:14px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+</head>
+<body>
+<div class="ribbon">A preview designed for <b>Passario Art of Hair</b> by SALVATOR ORBIS. Photos are from your public listing. Nothing here is live yet.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" style="text-decoration:none;color:inherit"><b>Passario</b><span>Art of Hair · Benoni</span></a>
+    <nav class="links" aria-label="Sections"><a href="#services">Services</a><a href="#book">Book</a><a href="#work">Our work</a><a href="#visit">Visit</a></nav>
+    <a class="btn solid" href="#book">Book a chair</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <p class="eyebrow">Oakfield Shopping Centre · Since 1994</p>
+      <h1>Thirty years of <em>beautiful hair</em> in Benoni.</h1>
+      <p class="lead">From the Mercury Centre in 1994 to Oakfield since 1995, Passario has grown into one of Benoni's leading salons. Now you can see the work, check the price list and book your stylist online.</p>
+      <div class="ctas"><a class="btn solid" href="#book">Book online</a><a class="btn" href="tel:+27118497722">Call 011 849 7722</a></div>
+    </div>
+    <figure>
+      <img src="https://assets.centralindex.com/W/48/c57586f6afaa7295209fc9cc4407fe10.jpg" alt="Inside the Passario salon at Oakfield Shopping Centre">
+      <figcaption><b>6th of ~150</b>salons nationally, Goldwell Illumin competition</figcaption>
+    </figure>
+  </div>
+
+  <div class="creds">
+    <div class="wrap">
+      <div class="cred"><b>1994</b><span>Opened in Benoni</span></div>
+      <div class="cred"><b>Top 6</b><span>Goldwell Illumin, of about 150 salons</span></div>
+      <div class="cred"><b>Mr &amp; Mrs Benoni</b><span>Long-time event sponsor</span></div>
+      <div class="cred"><b>L'Oréal · Matrix</b><span>Professional stockist</span></div>
+    </div>
+  </div>
+
+  <section class="block" id="services">
+    <div class="wrap">
+      <div class="head"><h2>Services &amp; prices</h2><p>A clear menu so clients know what to expect before they sit down. You set the prices; these rows show the layout.</p></div>
+      <div class="services">
+        <div class="svc"><h3>Cut &amp; finish</h3><span class="price">from R[ — ]</span><p>Consultation, wash, precision cut and blow-dry.</p></div>
+        <div class="svc"><h3>Colour</h3><span class="price">from R[ — ]</span><p>Full colour, roots and gloss with L'Oréal Professionnel and Matrix.</p></div>
+        <div class="svc"><h3>Highlights &amp; balayage</h3><span class="price">from R[ — ]</span><p>Foils, freehand and toning for a natural, lived-in finish.</p></div>
+        <div class="svc"><h3>Hair extensions</h3><span class="price">from R[ — ]</span><p>Fitting, colour-matching and maintenance appointments.</p></div>
+        <div class="svc"><h3>Treatments</h3><span class="price">from R[ — ]</span><p>Repair and hydration rituals for colour-treated hair.</p></div>
+        <div class="svc"><h3>Occasion styling</h3><span class="price">from R[ — ]</span><p>Weddings, matric dances and events. Book early in season.</p></div>
+      </div>
+      <p class="note">Service names follow your directory categories. Your real menu replaces these.</p>
+    </div>
+  </section>
+
+  <section class="block" id="book" style="padding-top:0">
+    <div class="wrap">
+      <div class="book">
+        <div>
+          <p class="eyebrow" style="color:var(--gold-dim)">Online booking</p>
+          <h2>Book a chair in under a minute.</h2>
+          <p style="margin-top:14px">Clients choose a service, a stylist and a time, then pay a small deposit by card or EFT. Fewer no-shows, and fewer messages to answer in the evening.</p>
+          <div class="steps"><div><i>1</i><span>Pick a service and stylist</span></div><div><i>2</i><span>Choose an open slot</span></div><div><i>3</i><span>Pay a deposit through PayFast to confirm</span></div></div>
+        </div>
+        <form class="form" id="bk" aria-label="Booking preview">
+          <div><label id="l-svc">Service</label><div class="chips" role="group" aria-labelledby="l-svc" data-k="svc"><button type="button" class="chip" aria-pressed="true">Cut &amp; finish</button><button type="button" class="chip" aria-pressed="false">Colour</button><button type="button" class="chip" aria-pressed="false">Highlights</button><button type="button" class="chip" aria-pressed="false">Extensions</button></div></div>
+          <div><label id="l-sty">Stylist</label><div class="chips" role="group" aria-labelledby="l-sty" data-k="sty"><button type="button" class="chip" aria-pressed="true">Any stylist</button><button type="button" class="chip" aria-pressed="false">[Stylist 1]</button><button type="button" class="chip" aria-pressed="false">[Stylist 2]</button></div></div>
+          <div><label id="l-day">Day</label><div class="chips" role="group" aria-labelledby="l-day" data-k="day"><button type="button" class="chip" aria-pressed="true">Tue</button><button type="button" class="chip" aria-pressed="false">Wed</button><button type="button" class="chip" aria-pressed="false">Thu</button><button type="button" class="chip" aria-pressed="false">Fri</button><button type="button" class="chip" aria-pressed="false">Sat</button></div></div>
+          <div><label id="l-time">Time</label><div class="chips" role="group" aria-labelledby="l-time" data-k="time"><button type="button" class="chip" aria-pressed="false">09:00</button><button type="button" class="chip" aria-pressed="true">11:30</button><button type="button" class="chip" aria-pressed="false">14:00</button><button type="button" class="chip" aria-pressed="false">16:30</button></div></div>
+          <div class="summary"><span id="sum"><b>Cut &amp; finish</b> · Any stylist · Tue 11:30</span><span>Deposit <b>R[ — ]</b></span></div>
+          <button class="btn solid" type="submit">Pay deposit &amp; book</button>
+          <div class="done" id="done" role="status">This is a preview, so no booking or payment was made. On the live site this step opens PayFast.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="work" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><h2>Our work</h2><p>Real photos from Passario's public listing. The live gallery grows with your best before-and-afters.</p></div>
+      <div class="gallery">
+        <figure class="tall"><img src="https://assets.centralindex.com/W/48/02b79a1bb5e24fe56ff31e3f563418c1.jpg" alt="Hairstyles by Passario" loading="lazy"><figcaption>Styles by Passario</figcaption></figure>
+        <figure><img src="https://assets.centralindex.com/W/48/c9eedfd4551f3dd700d8df626bbd9788.jpg" alt="Mr and Miss Benoni finalists styled by Passario, 2010" loading="lazy"><figcaption>Mr &amp; Miss Benoni finalists</figcaption></figure>
+        <div class="quote"><p>“Sun Stars at the Carnival, Goldwell Illumin, Mr &amp; Mrs Benoni: we show up where hair is celebrated.”</p><span>Your story, in your words</span></div>
+        <figure><img src="https://assets.centralindex.com/W/48/c57586f6afaa7295209fc9cc4407fe10.jpg" alt="The Passario salon floor" loading="lazy"><figcaption>The salon</figcaption></figure>
+        <div class="quote" style="background:var(--ink)"><p>Client reviews appear here.</p><span>Collected after each visit</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="visit" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><h2>Visit us</h2></div>
+      <div class="visit">
+        <div class="card"><h3>Find us</h3><p>Shop 58/59<br>Oakfield Shopping Centre<br>Benoni, 1501</p><p style="margin-top:14px"><a href="https://share.here.com/r/-26.150623,28.310845" target="_blank" rel="noopener">Get directions</a></p></div>
+        <div class="card"><h3>Opening hours</h3>
+          <table class="hours"><tbody>
+            <tr class="closed"><td>Monday</td><td>Closed</td></tr>
+            <tr><td>Tuesday</td><td>10:00–19:00</td></tr>
+            <tr><td>Wednesday</td><td>08:00–17:00</td></tr>
+            <tr><td>Thursday</td><td>10:00–19:00</td></tr>
+            <tr><td>Friday</td><td>08:00–17:00</td></tr>
+            <tr><td>Saturday</td><td>08:00–17:00</td></tr>
+            <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+          </tbody></table>
+        </div>
+        <div class="card"><h3>Talk to us</h3><p>Phone: <a href="tel:+27118497722">011 849 7722</a></p><p style="margin-top:8px">WhatsApp bookings: [your number]</p><p style="margin-top:8px">Products: L'Oréal Professionnel and Matrix</p><a class="btn solid" href="#book" style="margin-top:18px">Book online</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© Passario Art of Hair · Benoni</span><span>Hours and address from your public listing</span></div></footer>
+<div class="made"><div class="wrap"><span><b>Like it?</b> This preview can be your live site within 7 days, with bookings and deposits.</span><span>Vusumuzi Nhlapo · SALVATOR ORBIS (PTY) LTD · 072 100 5611 · salvatororbis94@gmail.com</span></div></div>
+
+<script>
+(function(){
+  var state={svc:'Cut & finish',sty:'Any stylist',day:'Tue',time:'11:30'};
+  document.querySelectorAll('.chips').forEach(function(g){
+    var k=g.getAttribute('data-k');
+    g.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;
+      g.querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed','false')});
+      b.setAttribute('aria-pressed','true');state[k]=b.textContent;
+      var s=document.getElementById('sum');s.textContent='';var bb=document.createElement('b');bb.textContent=state.svc;s.append(bb,' · '+state.sty+' · '+state.day+' '+state.time);
+    });
+  });
+  document.getElementById('bk').addEventListener('submit',function(e){e.preventDefault();document.getElementById('done').classList.add('show');});
+  document.querySelectorAll('img').forEach(function(img){img.addEventListener('error',function(){img.style.visibility='hidden';});});
+})();
+</script>
+
+</body>
+</html>
