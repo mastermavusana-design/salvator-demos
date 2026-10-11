@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tshimangadzo Catering &amp; Events · Soweto</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Preview site for Tshimangadzo Catering and Events Company, Soweto: weddings, parties, funerals and company events.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap">
+<script>document.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG'){var f=t.closest('figure');(f||t).style.display='none';}},true);</script>
+<style>
+/* Layout: garden-wedding elegance. Ivory + deep emerald + brass. Ribbon, centred header, split hero with arched photo, occasions grid, quote builder (interactive), listing photos strip, gallery, visit, go-live strip. */
+:root{
+  --ivory:#FBF7F0; --linen:#F2EBDF; --ink:#1C2320; --emerald:#1F5C4A; --emerald-2:#174A3B; --brass:#B8873B; --brass-lt:#E9D3A8;
+  --muted:#4A403D; --line:#E2D8C8;
+  --f-d:"Fraunces", Georgia, serif; --f-b:"Manrope", "Segoe UI", system-ui, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--ivory);color:var(--ink)}
+body{font-family:var(--f-b);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-d);font-weight:700;margin:0;line-height:1.06;letter-spacing:-.01em;text-wrap:balance}
+p{margin:0}
+a{color:var(--emerald)}
+:focus-visible{outline:2px solid var(--emerald);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.kick{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--emerald)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;border:1.5px solid var(--ink);color:var(--ink);background:transparent}
+.btn.em{background:var(--emerald);border-color:var(--emerald);color:#fff}
+.btn.em:hover{background:var(--emerald-2)}
+.btn:hover{border-color:var(--emerald)}
+
+.ribbon{background:var(--emerald-2);color:#F3EDE2;font-size:14px;text-align:center;padding:9px 16px}
+.ribbon b{color:#fff}
+
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:16px}
+.logo{text-decoration:none;color:var(--ink);line-height:1.1}
+.logo b{font-family:var(--f-d);font-size:26px;font-weight:700;display:block}
+.logo span{font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+nav{display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
+nav a{color:var(--ink);text-decoration:none}
+nav a:hover{color:var(--emerald)}
+
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(40px,7vw,84px)}
+.hero h1{font-size:clamp(42px,6.6vw,84px)}
+.hero h1 i{color:var(--emerald);font-style:italic}
+.hero .lead{font-size:clamp(18px,1.8vw,20px);color:#2C2826;max-width:46ch;margin-top:20px;font-weight:500}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero figure{margin:0;position:relative}
+.hero figure img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 24px 24px;background:var(--linen)}
+.hero figure::before{content:"";position:absolute;inset:-12px;border:1.5px solid var(--brass);border-radius:999px 999px 32px 32px;pointer-events:none}
+.hero figcaption{position:absolute;left:14px;bottom:14px;background:rgba(28,35,32,.88);color:#fff;font-size:13px;font-weight:600;padding:6px 10px;border-radius:8px}
+.hero .meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px;font-size:15px;color:var(--muted)}
+.hero .meta b{color:var(--ink);display:block;font-family:var(--f-d);font-size:20px}
+@media (max-width:860px){.hero{grid-template-columns:1fr}.hero figure{max-width:440px;margin-inline:auto;width:100%}}
+
+.occ{background:var(--linen);border-block:1px solid var(--line)}
+.occ .wrap{padding-block:clamp(48px,7vw,88px)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin-bottom:30px}
+.head h2{font-size:clamp(32px,4.4vw,54px);max-width:16ch}
+.head p{color:var(--muted);max-width:46ch}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.o{background:var(--ivory);border:1px solid var(--line);border-radius:20px;padding:22px}
+.o .ic{width:44px;height:44px;border-radius:50%;background:var(--emerald);color:#fff;display:grid;place-items:center;font-family:var(--f-d);font-weight:700;font-size:20px;margin-bottom:14px}
+.o h3{font-size:23px;margin-bottom:6px}
+.o p{color:var(--muted);font-size:16px}
+@media (max-width:900px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.grid4{grid-template-columns:1fr}}
+.also{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.also span{border:1px solid var(--brass);border-radius:999px;padding:6px 14px;font-size:15px;font-weight:600;background:#fff}
+
+section.blk{padding-block:clamp(52px,7vw,92px)}
+.quote{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media (max-width:900px){.quote{grid-template-columns:1fr}}
+.quote .intro h2{font-size:clamp(32px,4.2vw,50px)}
+.quote .intro p{color:var(--muted);margin-top:14px}
+.quote ol{margin:22px 0 0;padding-left:20px;color:var(--ink);display:grid;gap:8px}
+form.q{background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(18px,3vw,30px);display:grid;gap:20px;box-shadow:0 20px 50px rgba(28,35,32,.07)}
+.fl{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:15px;font-weight:600;padding:9px 15px;border-radius:999px;border:1.5px solid var(--line);background:var(--ivory);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--emerald);border-color:var(--emerald);color:#fff}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.row2{grid-template-columns:1fr}}
+input[type=date],input[type=text]{width:100%;font:inherit;padding:12px;border-radius:12px;border:1.5px solid var(--line);background:var(--ivory);color:var(--ink)}
+input[type=range]{width:100%;accent-color:var(--emerald)}
+.gv{font-family:var(--f-d);font-size:26px;font-weight:700}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-width:520px){.checks{grid-template-columns:1fr}}
+.checks label{display:flex;gap:10px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;font-weight:600;font-size:16px;background:var(--ivory)}
+.checks input{accent-color:var(--emerald);width:18px;height:18px}
+.sum{background:var(--linen);border-radius:14px;padding:14px 16px;font-size:16px}
+.sum b{font-family:var(--f-d)}
+.ok{display:none;background:#E5F1EB;border:1px solid #B7D6C6;color:#173B2E;border-radius:12px;padding:12px 14px;font-size:15px}
+.ok.show{display:block}
+
+.listing{display:flex;gap:22px;align-items:center;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;margin-bottom:28px}
+.listing .txt{max-width:32ch}
+.listing .txt b{font-family:var(--f-d);font-size:22px;display:block}
+.listing .txt p{color:var(--muted);font-size:16px}
+.snaps{display:flex;gap:14px;flex-wrap:wrap}
+.snaps figure{margin:0}
+.snaps img{display:block;width:180px;max-width:100%;height:auto;border:5px solid #fff;border-radius:6px;box-shadow:0 6px 18px rgba(28,35,32,.14);background:var(--linen)}
+.snaps figcaption{font-size:14px;color:var(--muted);margin-top:6px;font-weight:600}
+
+.gal{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-auto-rows:260px;gap:14px}
+.gal figure{margin:0;position:relative;border-radius:18px;overflow:hidden;background:var(--linen)}
+.gal figure.big{grid-row:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.gal figcaption{position:absolute;left:12px;bottom:12px;background:rgba(28,35,32,.88);color:#fff;font-size:14px;font-weight:600;padding:6px 10px;border-radius:8px}
+@media (max-width:820px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:220px}.gal figure.big{grid-column:1/-1;grid-row:auto}}
+@media (max-width:520px){.gal{grid-template-columns:1fr}}
+
+.visit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px}
+.card h3{font-size:23px;margin-bottom:10px}
+@media (max-width:860px){.visit{grid-template-columns:1fr}}
+
+.live{background:var(--emerald-2);color:#F3EDE2}
+.live .wrap{padding-block:clamp(40px,6vw,64px);display:flex;justify-content:space-between;gap:22px;align-items:center;flex-wrap:wrap}
+.live h2{font-size:clamp(28px,3.8vw,44px);color:#fff;max-width:20ch}
+.live p{margin-top:8px}
+.live .btn{border-color:#F3EDE2;color:#fff}
+.live .btn.lt{background:#F3EDE2;color:var(--emerald-2)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:24px;font-size:15px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="ribbon">A preview designed for <b>Tshimangadzo Catering &amp; Events</b> by SALVATOR ORBIS. The three small photos are from your public Hotfrog listing; the large photos are Unsplash stock. Nothing here is live yet.</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top"><b>Tshimangadzo</b><span>Catering &amp; Events · Soweto</span></a>
+    <nav aria-label="Sections"><a href="#occasions">Occasions</a><a href="#quote">Get a quote</a><a href="#work">Our work</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <span class="kick">Weddings · Parties · Funerals · Company events</span>
+      <h1>Your day, <i>beautifully</i> fed and dressed.</h1>
+      <p class="lead">We are a Soweto events team that coordinates and caters small and big occasions, from a backyard birthday to a full garden wedding. Food, décor, venue and planning, handled by one team.</p>
+      <div class="ctas"><a class="btn em" href="#quote">Plan my event</a><a class="btn" href="tel:+27824329375">Call 082 432 9375</a></div>
+      <div class="meta"><div><b>7 days</b>a week, 09:00–17:00</div><div><b>Soweto</b>491 Lenong Street</div></div>
+    </div>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1712068534065-f56c36e21759?auto=format&fit=crop&w=1000&q=75" srcset="https://images.unsplash.com/photo-1712068534065-f56c36e21759?auto=format&fit=crop&w=500&q=70 500w, https://images.unsplash.com/photo-1712068534065-f56c36e21759?auto=format&fit=crop&w=1000&q=75 1000w, https://images.unsplash.com/photo-1712068534065-f56c36e21759?auto=format&fit=crop&w=1400&q=75 1400w" sizes="(max-width:860px) 90vw, 42vw" alt="An outdoor wedding set-up in a park (stock photo)" fetchpriority="high">
+      <figcaption>Stock photo · your wedding here</figcaption>
+    </figure>
+  </div>
+
+  <section class="occ" id="occasions">
+    <div class="wrap">
+      <div class="head"><h2>Every kind of gathering</h2><p>Straight from how you describe your business: events coordinating and catering for people with small and big events.</p></div>
+      <div class="grid4">
+        <div class="o"><div class="ic">W</div><h3>Weddings</h3><p>Catering plus wedding décor in a range of colours and flowers, indoors or outdoors.</p></div>
+        <div class="o"><div class="ic">P</div><h3>Parties</h3><p>Small or big parties and theme parties, styled and catered.</p></div>
+        <div class="o"><div class="ic">F</div><h3>Funerals</h3><p>Respectful, well-run catering so the family can focus on each other.</p></div>
+        <div class="o"><div class="ic">C</div><h3>Company events</h3><p>Business functions and team building, fed and coordinated.</p></div>
+      </div>
+      <div class="also"><span>Event planning</span><span>Wedding &amp; event décor</span><span>Venue booking</span><span>Baking</span><span>Team building</span></div>
+    </div>
+  </section>
+
+  <section class="blk" id="quote">
+    <div class="wrap quote">
+      <div class="intro">
+        <span class="kick">Quote request</span>
+        <h2 style="margin-top:10px">Tell us about your event in one minute.</h2>
+        <p>Clients pick the occasion, date, guest count and what they need. You get every enquiry with the details already filled in, instead of ten back-and-forth WhatsApps.</p>
+        <ol><li>Choose your occasion and date</li><li>Slide to your guest count</li><li>Tick what you need, then send</li></ol>
+      </div>
+      <form class="q" id="qf" aria-label="Event quote preview">
+        <div><span class="fl" id="l-type">Occasion</span><div class="chips" role="group" aria-labelledby="l-type">
+          <button type="button" class="chip" aria-pressed="true">Wedding</button><button type="button" class="chip" aria-pressed="false">Party</button><button type="button" class="chip" aria-pressed="false">Funeral</button><button type="button" class="chip" aria-pressed="false">Company event</button><button type="button" class="chip" aria-pressed="false">Team building</button></div></div>
+        <div class="row2">
+          <div><label class="fl" for="dt">Date</label><input type="date" id="dt"></div>
+          <div><label class="fl" for="ar">Area or venue</label><input type="text" id="ar" placeholder="e.g. Soweto, own venue"></div>
+        </div>
+        <div><label class="fl" for="gs">Guests: <span class="gv" id="gv">120</span></label><input type="range" id="gs" min="20" max="500" step="10" value="120"></div>
+        <div><span class="fl">We need</span><div class="checks">
+          <label><input type="checkbox" value="Catering" checked> Catering</label>
+          <label><input type="checkbox" value="Décor &amp; flowers" checked> Décor &amp; flowers</label>
+          <label><input type="checkbox" value="Venue booking"> Venue booking</label>
+          <label><input type="checkbox" value="Cake &amp; baking"> Cake &amp; baking</label>
+          <label><input type="checkbox" value="Full coordination"> Full coordination</label>
+        </div></div>
+        <div class="sum" id="sum" aria-live="polite"></div>
+        <button class="btn em" type="submit">Send my enquiry</button>
+        <div class="ok" id="ok" role="status">This is a preview, so nothing was sent. On the live site this lands in your inbox and on WhatsApp, with all the details above.</div>
+      </form>
+    </div>
+  </section>
+
+  <section class="blk" id="work" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><h2>Our work</h2><p>Your own event photos go first. The big tiles are stock photos holding the space until then.</p></div>
+      <div class="listing">
+        <div class="txt"><b>From your listing</b><p>These are the photos on your Hotfrog page today. They're small, so a few fresh phone photos from your next event will make the site shine.</p></div>
+        <div class="snaps">
+          <figure><img src="https://assets.centralindex.com/W/48/fa570d5e8a9508dfab2a853b0a5bba81.jpg" alt="Outdoor wedding by Tshimangadzo" loading="lazy"><figcaption>Outdoor wedding</figcaption></figure>
+          <figure><img src="https://assets.centralindex.com/W/48/73490a7edae3b8f396cef492dde420ea.jpg" alt="Wedding décor by Tshimangadzo" loading="lazy"><figcaption>Wedding décor</figcaption></figure>
+          <figure><img src="https://assets.centralindex.com/W/48/015caa2412c35156f8cc52a014b2bcbf.jpg" alt="Theme party by Tshimangadzo" loading="lazy"><figcaption>Theme parties</figcaption></figure>
+        </div>
+      </div>
+      <div class="gal">
+        <figure class="big"><img src="https://images.unsplash.com/photo-1641996250159-9d2bbfb483fa?auto=format&fit=crop&w=900&q=75" srcset="https://images.unsplash.com/photo-1641996250159-9d2bbfb483fa?auto=format&fit=crop&w=500&q=70 500w, https://images.unsplash.com/photo-1641996250159-9d2bbfb483fa?auto=format&fit=crop&w=900&q=75 900w, https://images.unsplash.com/photo-1641996250159-9d2bbfb483fa?auto=format&fit=crop&w=1300&q=75 1300w" sizes="(max-width:820px) 100vw, 40vw" alt="Reception tables with white linen (stock photo)" loading="lazy"><figcaption>Reception · your photo here</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=700&q=75" srcset="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=700&q=75 700w, https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1000&q=75 1000w" sizes="(max-width:820px) 50vw, 30vw" alt="Buffet with chafing dishes (stock photo)" loading="lazy"><figcaption>Buffet · your photo here</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=700&q=75" srcset="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=700&q=75 700w, https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=75 1000w" sizes="(max-width:820px) 50vw, 30vw" alt="Table setting with a floral centrepiece (stock photo)" loading="lazy"><figcaption>Décor · your photo here</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1560117531-02eeab8e3593?auto=format&fit=crop&w=700&q=75" srcset="https://images.unsplash.com/photo-1560117531-02eeab8e3593?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1560117531-02eeab8e3593?auto=format&fit=crop&w=700&q=75 700w, https://images.unsplash.com/photo-1560117531-02eeab8e3593?auto=format&fit=crop&w=1000&q=75 1000w" sizes="(max-width:820px) 50vw, 30vw" alt="Tiered wedding cake with flowers (stock photo)" loading="lazy"><figcaption>Baking · your photo here</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=700&q=75" srcset="https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=700&q=75 700w, https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=1000&q=75 1000w" sizes="(max-width:820px) 50vw, 30vw" alt="Dining table set for guests (stock photo)" loading="lazy"><figcaption>Functions · your photo here</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><h2>Let's talk about your date</h2></div>
+      <div class="visit">
+        <div class="card"><h3>Visit</h3><p>491 Lenong Street<br>Soweto, 1808</p><p style="margin-top:12px"><a href="https://www.google.com/maps/search/?api=1&query=-26.260184,27.866355" target="_blank" rel="noopener">Open in Google Maps</a></p></div>
+        <div class="card"><h3>Hours</h3><p>Monday to Sunday<br>09:00–17:00</p></div>
+        <div class="card"><h3>Contact</h3><p><a href="tel:+27824329375">082 432 9375</a></p><p style="margin-top:6px;word-break:break-word"><a href="mailto:cateringandeventstshimangadzo@gmail.com">cateringandeventstshimangadzo@gmail.com</a></p><p style="margin-top:6px">WhatsApp: [your number]</p></div>
+      </div>
+      <p style="color:var(--muted);margin-top:18px;font-size:16px">Client reviews and package prices (R[ — ] per head) appear here once you share them.</p>
+    </div>
+  </section>
+
+  <section class="live" aria-label="Make it live">
+    <div class="wrap">
+      <div>
+        <h2>Ready before the December wedding season.</h2>
+        <p>Go live for R1,299, then R199 a month for hosting, updates and support.</p>
+        <p style="font-size:16px">Vusumuzi Nhlapo · SALVATOR ORBIS (PTY) LTD · 072 100 5611 · salvatororbis94@gmail.com</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn lt" href="tel:+27721005611">Call Vusumuzi</a><a class="btn" href="mailto:salvatororbis94@gmail.com?subject=Tshimangadzo%20website">Email</a></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© Tshimangadzo Catering &amp; Events · Soweto</span><span>Details from your public Hotfrog listing · Some photos: Unsplash</span></div></footer>
+
+<script>
+(function(){
+  var type='Wedding',f=document.getElementById('qf'),gs=document.getElementById('gs'),gv=document.getElementById('gv'),sum=document.getElementById('sum');
+  function upd(){
+    gv.textContent=gs.value;
+    var need=[].slice.call(f.querySelectorAll('.checks input:checked')).map(function(c){return c.parentNode.textContent.trim();});
+    var d=document.getElementById('dt').value;
+    sum.textContent='';var b=document.createElement('b');b.textContent=type;
+    sum.append(b,' for '+gs.value+' guests'+(d?' on '+new Date(d+'T12:00').toLocaleDateString('en-ZA',{day:'numeric',month:'long',year:'numeric'}):' · date to confirm')+(need.length?' · '+need.join(', '):''));
+    document.getElementById('ok').classList.remove('show');
+  }
+  f.querySelector('.chips').addEventListener('click',function(e){var c=e.target.closest('.chip');if(!c)return;f.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed','false')});c.setAttribute('aria-pressed','true');type=c.textContent;upd();});
+  f.addEventListener('input',upd);
+  f.addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').classList.add('show');});
+  upd();
+})();
+</script>
+</body>
+</html>

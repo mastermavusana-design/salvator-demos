@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kwa-Mashobane · Zondi, Soweto</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Preview site for Kwa-Mashobane Restaurant, 1611 Morobe Street, Zondi 1, Soweto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap">
+<script>document.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG'){var f=t.closest('figure');(f||t).style.display='none';}},true);</script>
+<style>
+/* Layout: kasi grill house. Dark charcoal + ember. Ribbon, header, hero over a fire photo, story strip, menu with order tray (WhatsApp order mock), press photos, visit, go-live strip. */
+:root{
+  --coal:#14100D; --coal-2:#1E1814; --coal-3:#2A221C; --line:#3B3028;
+  --cream:#F7EFE6; --soft:#E8DCCF; --ember:#F08A3E; --ember-2:#FF9F55; --mustard:#F2C14E; --leaf:#9CCB7A;
+  --f-d:"Bricolage Grotesque", "Arial Black", system-ui, sans-serif; --f-b:"DM Sans", system-ui, sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--coal);color:var(--cream)}
+body{font-family:var(--f-b);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-d);font-weight:700;margin:0;line-height:1.02;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0}
+a{color:var(--mustard)}
+:focus-visible{outline:3px solid var(--mustard);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.tag{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mustard)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:12px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;border:2px solid var(--cream);color:var(--cream);background:transparent}
+.btn.hot{background:var(--ember);border-color:var(--ember);color:var(--coal)}
+.btn.hot:hover{background:var(--ember-2);border-color:var(--ember-2)}
+.btn:hover{border-color:var(--mustard)}
+
+.ribbon{background:var(--mustard);color:var(--coal);font-size:14px;font-weight:500;text-align:center;padding:9px 16px}
+.ribbon b{font-weight:700}
+
+header{position:sticky;top:0;z-index:5;background:rgba(20,16,13,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:14px;flex-wrap:wrap}
+.logo{font-family:var(--f-d);font-weight:800;font-size:26px;letter-spacing:-.02em;color:var(--cream);text-decoration:none;line-height:1}
+.logo span{color:var(--ember)}
+nav{display:flex;gap:20px;flex-wrap:wrap;font-size:15px}
+nav a{color:var(--soft);text-decoration:none}
+nav a:hover{color:var(--mustard)}
+
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,16,13,.96) 0%,rgba(20,16,13,.78) 50%,rgba(20,16,13,.35) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-block:clamp(56px,10vw,128px)}
+.hero h1{font-size:clamp(46px,8.4vw,108px);font-weight:800;max-width:11ch}
+.hero h1 em{font-style:normal;color:var(--ember)}
+.hero p.lead{font-size:clamp(18px,2vw,21px);color:var(--cream);max-width:46ch;margin-top:22px;font-weight:500}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.fact{background:rgba(20,16,13,.85);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:15px;color:var(--cream)}
+.fact b{color:var(--mustard)}
+.credit{position:absolute;right:12px;bottom:12px;z-index:2;background:rgba(20,16,13,.9);color:#fff;font-size:12px;padding:4px 8px;border-radius:6px}
+
+.story{background:var(--coal-2);border-bottom:1px solid var(--line)}
+.story .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(24px,5vw,72px);padding-block:clamp(48px,7vw,88px);align-items:start}
+.story h2{font-size:clamp(34px,4.6vw,56px)}
+.story p{color:var(--soft);font-size:18px;margin-top:14px}
+.story .nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:26px}
+.num{background:var(--coal-3);border:1px solid var(--line);border-radius:16px;padding:16px}
+.num b{font-family:var(--f-d);font-size:34px;display:block;color:var(--ember);line-height:1.05}
+.num span{font-size:15px;color:var(--soft)}
+@media (max-width:860px){.story .wrap{grid-template-columns:1fr}}
+@media (max-width:520px){.story .nums{grid-template-columns:1fr 1fr}}
+
+section.blk{padding-block:clamp(52px,7vw,92px)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin-bottom:28px}
+.head h2{font-size:clamp(34px,4.8vw,58px)}
+.head p{color:var(--soft);max-width:46ch}
+
+.order{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:920px){.order{grid-template-columns:1fr}}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tab{font:inherit;font-size:15px;font-weight:700;padding:9px 14px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--soft);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--cream);color:var(--coal);border-color:var(--cream)}
+.items{display:grid;gap:10px}
+.item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 14px;background:var(--coal-2);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.item h3{font-size:20px;font-weight:700}
+.item p{grid-column:1;color:var(--soft);font-size:16px}
+.item .pr{font-family:var(--f-d);font-weight:700;font-size:20px;color:var(--mustard);font-variant-numeric:tabular-nums;text-align:right}
+.qty{grid-column:2;display:flex;align-items:center;gap:8px;justify-self:end}
+.qty button{width:38px;height:38px;border-radius:10px;border:1.5px solid var(--line);background:var(--coal-3);color:var(--cream);font:inherit;font-size:20px;font-weight:700;cursor:pointer;line-height:1}
+.qty button.add{background:var(--ember);border-color:var(--ember);color:var(--coal)}
+.qty output{min-width:18px;text-align:center;font-weight:700}
+.note{font-size:15px;color:var(--soft);margin-top:14px}
+
+.tray{position:sticky;top:86px;background:var(--cream);color:var(--coal);border-radius:22px;padding:22px;display:grid;gap:14px}
+.tray h3{font-size:26px}
+.tray .lines{display:grid;gap:6px;font-size:16px;min-height:48px}
+.tray .lines div{display:flex;justify-content:space-between;gap:10px}
+.tray .empty{color:#4A403D}
+.tray label{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4A403D;display:block;margin-bottom:6px}
+.tray input,.tray select{width:100%;font:inherit;padding:11px 12px;border-radius:10px;border:1.5px solid #CDBFB1;background:#fff;color:var(--coal)}
+.tray .tot{display:flex;justify-content:space-between;border-top:2px dashed #CDBFB1;padding-top:12px;font-family:var(--f-d);font-size:24px;font-weight:700}
+.tray .btn.wa{background:#155C36;border-color:#155C36;color:#fff;width:100%}
+.tray .btn.wa:hover{background:#0F4A2B}
+.preview{display:none;background:#E9F5EC;border:1px solid #B8DCC3;color:#163B25;border-radius:12px;padding:12px;font-size:15px;white-space:pre-line}
+.preview.show{display:block}
+
+.press{background:var(--coal-2);border-block:1px solid var(--line)}
+.press .wrap{padding-block:clamp(44px,6vw,72px)}
+.snaps{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px}
+.snaps figure{margin:0;background:var(--coal-3);border:1px solid var(--line);border-radius:14px;padding:8px;width:min(100%,260px)}
+.snaps img{display:block;width:100%;height:200px;object-fit:cover;border-radius:8px;background:var(--coal)}
+.snaps figcaption{font-size:14px;color:var(--soft);padding:8px 4px 2px}
+.snaps figure.wide{width:min(100%,540px)}
+.snaps figure.wide img{height:200px}
+
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.gallery figure{margin:0;position:relative;border-radius:18px;overflow:hidden;background:var(--coal-2);aspect-ratio:4/3}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block}
+.gallery figcaption{position:absolute;left:12px;bottom:12px;background:rgba(20,16,13,.88);color:#fff;font-size:14px;font-weight:700;padding:6px 10px;border-radius:8px}
+@media (max-width:760px){.gallery{grid-template-columns:1fr}}
+
+.visit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:var(--coal-2);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card h3{font-size:24px;margin-bottom:10px}
+.card p{color:var(--soft)}
+.card p b{color:var(--cream)}
+@media (max-width:860px){.visit{grid-template-columns:1fr}}
+
+.live{background:var(--ember);color:var(--coal)}
+.live .wrap{padding-block:clamp(36px,5vw,56px);display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+.live h2{font-size:clamp(28px,3.8vw,44px);max-width:20ch}
+.live p{font-size:17px;font-weight:500;margin-top:8px}
+.live .btn{border-color:var(--coal);color:var(--coal)}
+.live .btn.dark{background:var(--coal);color:var(--cream)}
+footer{border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:24px;font-size:15px;color:var(--soft)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="ribbon">A preview designed for <b>Kwa-Mashobane</b> by SALVATOR ORBIS. Photos in the "From your pages" strip are from your public Uber Eats page and press feature; the big food photos are Unsplash stock. Nothing here is live yet.</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Kwa-<span>Mashobane</span></a>
+    <nav aria-label="Sections"><a href="#story">Our story</a><a href="#menu">Menu</a><a href="#visit">Visit</a></nav>
+    <a class="btn hot" href="#menu">Order now</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-label="Welcome">
+    <img class="bg" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=75" srcset="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=70 800w, https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=75 1200w, https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=75 1600w" sizes="100vw" alt="" fetchpriority="high">
+    <div class="wrap">
+      <span class="tag">1611 Morobe Street · Zondi 1 · Soweto</span>
+      <h1>Smoke, pap &amp; <em>kasi flavour.</em></h1>
+      <p class="lead">Ribs, smoked chicken, wors and pork chops with pap and salads, cooked the Kwa-Mashobane way since 2020. Pick your plate below and send your order straight to us on WhatsApp.</p>
+      <div class="ctas"><a class="btn hot" href="#menu">See the menu</a><a class="btn" href="tel:+27658139816">Call 065 813 9816</a></div>
+      <div class="facts"><span class="fact">Open <b>10:00–21:00</b></span><span class="fact"><b>4.3</b> on Uber Eats · 2,000+ ratings</span><span class="fact">Catering for <b>business meetings</b></span></div>
+    </div>
+    <span class="credit">Stock photo: Unsplash</span>
+  </section>
+
+  <section class="story" id="story">
+    <div class="wrap">
+      <div>
+        <span class="tag">Our story</span>
+        <h2 style="margin-top:12px">Started in 2020, right here in Zondi.</h2>
+      </div>
+      <div>
+        <p>Musa Khumalo, known to everyone as Mashobane, opened Kwa-Mashobane in 2020, in the middle of COVID-19, with a team of just five people. The plan was simple: honest kasi-style food, with traditional meals on the menu from time to time.</p>
+        <p>Today the kitchen serves breakfast and lunch, caters for business meetings, and has collected more than 2,000 ratings on Uber Eats.</p>
+        <div class="nums">
+          <div class="num"><b>2020</b><span>Doors opened in Zondi</span></div>
+          <div class="num"><b>5</b><span>People on the first team</span></div>
+          <div class="num"><b>2,000+</b><span>Uber Eats ratings</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="menu">
+    <div class="wrap">
+      <div class="head"><h2>Build your order</h2><p>Tap + to add plates. Your order turns into a ready-to-send WhatsApp message, so the kitchen gets it exactly right.</p></div>
+      <div class="order">
+        <div>
+          <div class="tabs" role="tablist" aria-label="Menu sections">
+            <button class="tab" role="tab" aria-selected="true" data-cat="pap">Meat, pap &amp; salads</button>
+            <button class="tab" role="tab" aria-selected="false" data-cat="fries">Ribs &amp; fries</button>
+            <button class="tab" role="tab" aria-selected="false" data-cat="share">Platters to share</button>
+          </div>
+          <div class="items" id="items"></div>
+          <p class="note">Dishes and prices as listed on your Uber Eats menu in October 2026. Your walk-in prices replace them on the live site.</p>
+        </div>
+        <aside class="tray" aria-label="Your order">
+          <h3>Your order</h3>
+          <div class="lines" id="lines"><span class="empty">Nothing yet. Add a plate.</span></div>
+          <div class="tot"><span>Total</span><span id="total">R0</span></div>
+          <div><label for="nm">Your name</label><input id="nm" placeholder="e.g. Thabo" autocomplete="name"></div>
+          <div><label for="when">Collect</label><select id="when"><option>As soon as possible</option><option>In 30 minutes</option><option>In 1 hour</option></select></div>
+          <button class="btn wa" id="send" type="button">Send order on WhatsApp</button>
+          <div class="preview" id="preview" role="status"></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="press" aria-label="Photos from your pages">
+    <div class="wrap">
+      <span class="tag">From your pages</span>
+      <h2 style="font-size:clamp(28px,3.6vw,40px);margin-top:10px">The real Kwa-Mashobane</h2>
+      <p style="color:var(--soft);margin-top:10px;max-width:60ch">These photos come from your Uber Eats page and StartupMag's feature on you. On the live site we swap in your own food and team photos.</p>
+      <div class="snaps">
+        <figure class="wide"><img src="https://tb-static.uber.com/prod/image-proc/processed_images/0956a36af2617a32baae1925d8528c29/7d9011fd8e36c5a7ce512c5a2f2d7fe5.jpeg" alt="Kwa-Mashobane's banner photo on Uber Eats" loading="lazy"><figcaption>Your Uber Eats banner</figcaption></figure>
+        <figure><img src="https://startupmag.co.za/wp-content/uploads/2025/10/1760718930158.jpg" alt="Photo from StartupMag's feature on Kwa-Mashobane" loading="lazy"><figcaption>StartupMag feature, Oct 2025</figcaption></figure>
+        <figure><img src="https://startupmag.co.za/wp-content/uploads/2025/10/1760718907223.jpg" alt="Photo from StartupMag's feature on Kwa-Mashobane" loading="lazy"><figcaption>StartupMag feature, Oct 2025</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" aria-label="Food gallery">
+    <div class="wrap">
+      <div class="head"><h2>Off the grill</h2><p>Stock photos hold these spots for now. Your own plates go here.</p></div>
+      <div class="gallery">
+        <figure><img src="https://images.unsplash.com/photo-1616252980327-ec70572e5df9?auto=format&fit=crop&w=800&q=75" srcset="https://images.unsplash.com/photo-1616252980327-ec70572e5df9?auto=format&fit=crop&w=500&q=70 500w, https://images.unsplash.com/photo-1616252980327-ec70572e5df9?auto=format&fit=crop&w=800&q=75 800w, https://images.unsplash.com/photo-1616252980327-ec70572e5df9?auto=format&fit=crop&w=1100&q=75 1100w" sizes="(max-width:760px) 100vw, 33vw" alt="Meat on a charcoal grill (stock photo)" loading="lazy"><figcaption>Your grill photo here</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=75" srcset="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=70 500w, https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=75 800w, https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1100&q=75 1100w" sizes="(max-width:760px) 100vw, 33vw" alt="Grilled meat and vegetables (stock photo)" loading="lazy"><figcaption>Your platter photo here</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1508615263227-c5d58c1e5821?auto=format&fit=crop&w=800&q=75" srcset="https://images.unsplash.com/photo-1508615263227-c5d58c1e5821?auto=format&fit=crop&w=500&q=70 500w, https://images.unsplash.com/photo-1508615263227-c5d58c1e5821?auto=format&fit=crop&w=800&q=75 800w, https://images.unsplash.com/photo-1508615263227-c5d58c1e5821?auto=format&fit=crop&w=1100&q=75 1100w" sizes="(max-width:760px) 100vw, 33vw" alt="Tongs over meat on an open fire (stock photo)" loading="lazy"><figcaption>Your kitchen photo here</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="visit" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><h2>Come through</h2></div>
+      <div class="visit">
+        <div class="card"><h3>Find us</h3><p>1611 Morobe Street<br>Zondi 1, Soweto, 1868</p><p style="margin-top:12px"><a href="https://www.google.com/maps/search/?api=1&query=1611+Morobe+Street+Zondi+Soweto" target="_blank" rel="noopener">Open in Google Maps</a></p></div>
+        <div class="card"><h3>Hours</h3><p><b>Every day</b> 10:00–21:00</p><p style="margin-top:8px;font-size:15px">As listed on Uber Eats. Breakfast hours: [your times]</p></div>
+        <div class="card"><h3>Talk to us</h3><p><a href="tel:+27658139816">065 813 9816</a> · <a href="tel:+27742221968">074 222 1968</a></p><p style="margin-top:8px">WhatsApp orders: [your WhatsApp number]</p><p style="margin-top:8px">Business-meeting catering: ask us for a quote.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="live" aria-label="Make it live">
+    <div class="wrap">
+      <div>
+        <h2>Like it? This can be your site within a week.</h2>
+        <p>Go live for R1,299, then R199 a month for hosting, updates and support.</p>
+        <p style="font-size:16px">Vusumuzi Nhlapo · SALVATOR ORBIS (PTY) LTD · 072 100 5611 · salvatororbis94@gmail.com</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn dark" href="tel:+27721005611">Call Vusumuzi</a><a class="btn" href="mailto:salvatororbis94@gmail.com?subject=Kwa-Mashobane%20website">Email</a></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© Kwa-Mashobane · Zondi, Soweto</span><span>Menu, hours and rating from your Uber Eats page · Story from StartupMag · Some photos: Unsplash</span></div></footer>
+
+<script>
+(function(){
+  var M={
+    pap:[
+      ['Half Smoke Chicken, Pap & 2 Salads',113,'Half smoked chicken with pap and two side salads.'],
+      ['Full Smoke Chicken, Pap & 2 Salads',240,'A whole smoked chicken with pap and two side salads.'],
+      ['Ribs, Pap & 2 Salads',145,'Ribs served with pap and two salads.'],
+      ['Wors, Pap & 2 Salads',89,'Wors with pap and two salads.'],
+      ['Pork Chops, Pap & Salads',94,'Pork chops with pap and mixed salads.'],
+      ['Inhliziyo, Pap & 1 Salad',110,'Heart meat with pap and one salad.'],
+      ['Full Wings (5), Pap & 2 Salads',109,'Five full wings with pap and two salads.']
+    ],
+    fries:[
+      ['Pork Ribs (500 g), Fries & Salads',150,'500 g pork ribs with chips and side salads.'],
+      ['Pork Ribs (1 kg), Fries & Salads',245,'A full kilo of ribs with chips and salads.'],
+      ['Beef Stew, Salads & Starch',145,'Beef stew with salads and starch.']
+    ],
+    share:[
+      ['Ribs (500 g), Wors, 5 Wings & Pap',250,'Ribs, wors and five full wings with pap.'],
+      ['Snack Platter for Friends n Family',400,'A snack platter built for sharing.'],
+      ['Family Platter & Friend with Fries',650,'The big one, with fries, for the whole table.']
+    ]
+  };
+  var cart={}, cat='pap';
+  var itemsEl=document.getElementById('items'), linesEl=document.getElementById('lines'), totEl=document.getElementById('total');
+  function rand(n){return 'R'+n.toLocaleString('en-ZA');}
+  function render(){
+    itemsEl.textContent='';
+    M[cat].forEach(function(it){
+      var d=document.createElement('div');d.className='item';
+      var h=document.createElement('h3');h.textContent=it[0];
+      var pr=document.createElement('span');pr.className='pr';pr.textContent=rand(it[1]);
+      var p=document.createElement('p');p.textContent=it[2];
+      var q=document.createElement('div');q.className='qty';
+      var minus=document.createElement('button');minus.type='button';minus.textContent='−';minus.setAttribute('aria-label','Remove one '+it[0]);
+      var out=document.createElement('output');out.textContent=(cart[it[0]]||{n:0}).n;
+      var plus=document.createElement('button');plus.type='button';plus.className='add';plus.textContent='+';plus.setAttribute('aria-label','Add one '+it[0]);
+      minus.onclick=function(){if(cart[it[0]]){cart[it[0]].n--;if(cart[it[0]].n<=0)delete cart[it[0]];}out.textContent=(cart[it[0]]||{n:0}).n;tray();};
+      plus.onclick=function(){cart[it[0]]=cart[it[0]]||{n:0,p:it[1]};cart[it[0]].n++;out.textContent=cart[it[0]].n;tray();};
+      q.append(minus,out,plus);
+      d.append(h,pr,p,q);itemsEl.append(d);
+    });
+  }
+  function tray(){
+    linesEl.textContent='';var t=0,keys=Object.keys(cart);
+    if(!keys.length){var e=document.createElement('span');e.className='empty';e.textContent='Nothing yet. Add a plate.';linesEl.append(e);}
+    keys.forEach(function(k){var c=cart[k];t+=c.n*c.p;var r=document.createElement('div');var a=document.createElement('span');a.textContent=c.n+' × '+k;var b=document.createElement('span');b.textContent=rand(c.n*c.p);r.append(a,b);linesEl.append(r);});
+    totEl.textContent=rand(t);
+    document.getElementById('preview').classList.remove('show');
+  }
+  document.querySelectorAll('.tab').forEach(function(b){b.onclick=function(){document.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-selected','false')});b.setAttribute('aria-selected','true');cat=b.getAttribute('data-cat');render();};});
+  document.getElementById('send').onclick=function(){
+    var keys=Object.keys(cart),pv=document.getElementById('preview');
+    if(!keys.length){pv.textContent='Add at least one plate first.';pv.classList.add('show');return;}
+    var t=0,msg='Hi Kwa-Mashobane! Order from '+(document.getElementById('nm').value||'[name]')+':\n';
+    keys.forEach(function(k){t+=cart[k].n*cart[k].p;msg+='• '+cart[k].n+' × '+k+'\n';});
+    msg+='Total: '+rand(t)+'\nCollect: '+document.getElementById('when').value;
+    pv.textContent='Preview only, nothing was sent. On the live site this message opens in WhatsApp to your number:\n\n'+msg;pv.classList.add('show');
+  };
+  render();
+})();
+</script>
+</body>
+</html>
