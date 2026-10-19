@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grass Paradise · Instant Lawn, Turf &amp; Irrigation · Germiston</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Preview website for Grass Paradise, Germiston: instant lawn, artificial turf, top soil, flowers and trees, irrigation and water tanks, with 24-hour delivery and free quotes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: bold outdoor/turf — ribbon, full-bleed dark green hero over lawn photo, product grid, square-metre quote builder (WhatsApp message), how it works, gallery, contact, go-live. */
+:root{
+  --forest:#0F2A1B; --forest-2:#163A26; --forest-3:#1E4A31; --dline:#2F5E43;
+  --lime:#C8E86A; --lime-2:#DAF28F; --cream:#F6F4EC; --white:#FFFFFF; --ink:#13201A; --muted:#3F4A42; --line:#DCDDD0; --soil:#5A3B22;
+  --f-d:"Space Grotesk", "Arial Black", system-ui, sans-serif; --f-b:"Inter", system-ui, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--cream);color:var(--ink)}
+body{font-family:var(--f-b);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-d);font-weight:700;margin:0;line-height:1.02;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0}
+a{color:var(--forest-3)}
+img{max-width:100%}
+:focus-visible{outline:3px solid var(--lime);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.tag{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 24px;border-radius:12px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;border:2px solid currentColor;background:transparent;color:inherit}
+.btn.lime{background:var(--lime);border-color:var(--lime);color:var(--forest)}
+.btn.lime:hover{background:var(--lime-2);border-color:var(--lime-2)}
+.btn.dark{background:var(--forest);border-color:var(--forest);color:#fff}
+
+.ribbon{background:#000;color:#ECEFE6;font-size:14px;text-align:center;padding:10px 16px;line-height:1.45}
+.ribbon b{color:#fff}
+
+.hero{position:relative;color:#fff;background:var(--forest);overflow:hidden}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,42,27,.96) 0%,rgba(15,42,27,.82) 45%,rgba(15,42,27,.35) 100%)}
+.hero .wrap{position:relative;z-index:1}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-block:18px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:var(--f-d);font-size:24px;font-weight:700;letter-spacing:-.02em}
+.logo svg{flex:none}
+.nav a.call{color:#fff;font-weight:600;text-decoration:none;border-bottom:2px solid var(--lime)}
+.hero .body{padding-block:clamp(48px,9vw,120px) clamp(56px,9vw,120px);max-width:760px}
+.hero .tag{color:var(--lime)}
+.hero h1{font-size:clamp(46px,8vw,104px);margin-top:14px}
+.hero h1 span{color:var(--lime)}
+.hero p.lead{font-size:20px;color:#E8EFE6;max-width:52ch;margin-top:22px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero .cap{position:absolute;right:16px;bottom:14px;z-index:1;background:rgba(0,0,0,.72);color:#fff;font-size:13px;font-weight:600;padding:5px 10px;border-radius:8px}
+
+.usp{background:var(--lime);color:var(--forest)}
+.usp .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;padding-block:22px}
+.usp b{display:block;font-family:var(--f-d);font-size:24px;line-height:1.1}
+.usp span{font-size:15px;font-weight:600}
+@media (max-width:820px){.usp .wrap{grid-template-columns:1fr 1fr}}
+
+section.block{padding-block:clamp(56px,8vw,100px)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.head h2{font-size:clamp(34px,5vw,60px);max-width:15ch}
+.head p{color:var(--muted);max-width:46ch}
+.head .tag{color:var(--forest-3)}
+
+.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.prod{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
+.prod .ico{width:46px;height:46px;border-radius:12px;background:var(--forest);display:grid;place-items:center}
+.prod h3{font-size:24px}
+.prod p{color:var(--muted);font-size:16px}
+.prod .from{margin-top:auto;font-weight:700;font-variant-numeric:tabular-nums}
+@media (max-width:900px){.products{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.products{grid-template-columns:1fr}}
+
+.quote{background:var(--forest);color:#fff;border-radius:28px;padding:clamp(24px,4vw,52px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
+.quote h2{font-size:clamp(32px,4.4vw,52px)}
+.quote .tag{color:var(--lime)}
+.quote p{color:#E4ECE3}
+.qform{display:grid;gap:18px}
+.qform .lbl{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E2E9DF;margin-bottom:8px;display:block}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{font:inherit;font-size:15px;font-weight:600;padding:10px 14px;border-radius:10px;border:1.5px solid var(--dline);background:var(--forest-2);color:#fff;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--lime);border-color:var(--lime);color:var(--forest)}
+.m2{display:flex;align-items:center;gap:14px}
+.m2 input[type=range]{flex:1;accent-color:var(--lime);height:28px}
+.m2 output{font-family:var(--f-d);font-size:30px;font-weight:700;min-width:5.5ch;text-align:right;font-variant-numeric:tabular-nums}
+.qform input[type=text]{width:100%;font:inherit;padding:13px 14px;border-radius:10px;border:1.5px solid var(--dline);background:var(--forest-2);color:#fff}
+.qform input[type=text]::placeholder{color:#DCE5DD}
+.msg{background:#0A1F13;border:1px dashed var(--dline);border-radius:14px;padding:16px;font-size:15px;color:#E2E9DF;white-space:pre-line;min-height:120px}
+.msg b{color:var(--lime)}
+.hint{font-size:14px;color:#E2E9DF}
+.done{display:none;background:var(--lime);color:var(--forest);border-radius:12px;padding:12px 14px;font-size:15px;font-weight:600}
+.done.show{display:block}
+@media (max-width:900px){.quote{grid-template-columns:1fr}}
+
+.how{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s}
+.how div{border-top:4px solid var(--forest);padding-top:16px}
+.how div::before{counter-increment:s;content:"0" counter(s);font-family:var(--f-d);font-size:40px;font-weight:700;color:var(--forest-3);display:block;line-height:1}
+.how h3{font-size:22px;margin-top:10px}
+.how p{color:var(--muted);font-size:16px;margin-top:6px}
+@media (max-width:820px){.how{grid-template-columns:1fr 1fr}}
+
+.gal{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-auto-rows:240px;gap:14px}
+.gal figure{margin:0;position:relative;border-radius:18px;overflow:hidden;background:var(--forest-2)}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.gal .big{grid-row:span 2}
+.gal figcaption{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.76);color:#fff;font-size:13px;font-weight:600;padding:5px 10px;border-radius:8px}
+.gal .ba{background:var(--soil);color:#fff;border-radius:18px;padding:22px;display:flex;flex-direction:column;justify-content:space-between}
+.gal .ba h3{font-size:26px}
+.gal .ba p{color:#F3E7DA;font-size:16px}
+@media (max-width:820px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:200px}.gal .big{grid-column:1/-1}}
+@media (max-width:520px){.gal{grid-template-columns:1fr}}
+
+.contact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ccard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.ccard h3{font-size:22px;margin-bottom:10px}
+.ccard p+p{margin-top:6px}
+@media (max-width:820px){.contact{grid-template-columns:1fr}}
+
+.golive{background:var(--lime);color:var(--forest);border-radius:28px;padding:clamp(26px,4vw,52px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:26px;align-items:center}
+.golive h2{font-size:clamp(32px,4.4vw,52px)}
+.golive p{font-size:18px;margin-top:12px;font-weight:500}
+.golive .who{background:var(--forest);color:#fff;border-radius:18px;padding:22px;line-height:1.75}
+.golive .who a{color:var(--lime)}
+@media (max-width:820px){.golive{grid-template-columns:1fr}}
+
+footer{background:var(--forest);color:#E2E9DF;margin-top:64px}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-block:26px;font-size:15px}
+</style>
+</head>
+<body>
+<div class="ribbon">A preview designed for <b>Grass Paradise</b> by SALVATOR ORBIS. We couldn't use photos from your ad, so all photos here are Unsplash stock standing in for your own jobs. Nothing here is live yet.</div>
+
+<header class="hero">
+  <img class="bg" src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1600&q=80" srcset="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=75 800w, https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1600&q=80 1600w, https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=2200&q=80 2200w" sizes="100vw" alt="" fetchpriority="high">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="#top"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="#C8E86A"/><path d="M8 26c2-6 3-11 3-16M14 26c1-5 2-9 5-13M20 26c0-4 1-8 6-12" stroke="#0F2A1B" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>Grass Paradise</a>
+      <a class="call" href="tel:+27609228882">060 922 8882</a>
+    </nav>
+    <div class="body" id="top">
+      <span class="tag">Germiston · East Rand · 24-hour delivery</span>
+      <h1>A green lawn <span>by tomorrow.</span></h1>
+      <p class="lead">Instant lawn, artificial turf, top soil, flowers and trees, irrigation and water tanks from Grass Paradise. Tell us your square metres and area, and we'll send a free quote.</p>
+      <div class="ctas"><a class="btn lime" href="#quote">Get a free quote</a><a class="btn" href="#products">See what we supply</a></div>
+    </div>
+  </div>
+  <span class="cap">Stock photo · your lawn here</span>
+</header>
+
+<div class="usp">
+  <div class="wrap">
+    <div><b>24 hours</b><span>Delivery turnaround</span></div>
+    <div><b>Free quotes</b><span>Online, by square metre</span></div>
+    <div><b>Real &amp; artificial</b><span>Instant lawn or turf</span></div>
+    <div><b>Soil to tanks</b><span>Everything for the garden</span></div>
+  </div>
+</div>
+
+<main>
+  <section class="block" id="products">
+    <div class="wrap">
+      <div class="head"><div><span class="tag">What we supply</span><h2>Everything your garden needs, delivered.</h2></div><p>The products from your Gumtree ad, laid out so customers can see the whole range at a glance. Prices are yours to fill in.</p></div>
+      <div class="products">
+        <div class="prod"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20c1-5 2-9 2-14M9 20c1-4 2-7 4-10M15 20c0-3 1-6 5-9" stroke="#C8E86A" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></div><h3>Instant lawn</h3><p>Rolls of real grass, laid and green the same day.</p><span class="from">from R[ — ] / m²</span></div>
+        <div class="prod"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M5 18V9M9 18V7M13 18V9M17 18V6M21 18v-8" stroke="#C8E86A" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></div><h3>Artificial turf</h3><p>No mowing, no watering, green all year.</p><span class="from">from R[ — ] / m²</span></div>
+        <div class="prod"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17c3-3 6-3 9 0s6 3 9 0M3 12c3-3 6-3 9 0s6 3 9 0" stroke="#C8E86A" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></div><h3>Top soil</h3><p>Prepare the ground so your new lawn takes root.</p><span class="from">from R[ — ] / load</span></div>
+        <div class="prod"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5" stroke="#C8E86A" stroke-width="2.2" fill="none"/><path d="M12 14v7" stroke="#C8E86A" stroke-width="2.2" stroke-linecap="round"/></svg></div><h3>Flowers &amp; trees</h3><p>Plants to finish the garden around your lawn.</p><span class="from">from R[ — ]</span></div>
+        <div class="prod"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3 4 5 7 5 10a5 5 0 0 1-10 0c0-3 2-6 5-10z" stroke="#C8E86A" stroke-width="2.2" fill="none"/></svg></div><h3>Irrigation</h3><p>Sprinkler and watering systems that keep it green.</p><span class="from">Quoted per site</span></div>
+        <div class="prod"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="12" height="16" rx="3" stroke="#C8E86A" stroke-width="2.2" fill="none"/><path d="M6 10h12" stroke="#C8E86A" stroke-width="2.2"/></svg></div><h3>Water tanks</h3><p>Store rainwater and keep the garden going through restrictions.</p><span class="from">from R[ — ]</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="quote" style="padding-top:0">
+    <div class="wrap">
+      <div class="quote">
+        <div>
+          <span class="tag">Free quote</span>
+          <h2>Price your lawn in 30 seconds.</h2>
+          <p style="margin-top:14px">Your ad already invites customers to ask for a free quote online. This builder asks for exactly what you need to price the job (square metres, type of grass, extras and area) and drops it into your WhatsApp as a ready-to-answer message.</p>
+          <div class="msg" id="msg" aria-live="polite" style="margin-top:22px"></div>
+          <p class="hint" style="margin-top:10px">This is the message you'd receive on WhatsApp.</p>
+        </div>
+        <form class="qform" id="qf" aria-label="Quote builder preview">
+          <div><span class="lbl" id="l-type">What do you need?</span><div class="seg" role="group" aria-labelledby="l-type" data-k="type"><button type="button" aria-pressed="true">Instant lawn</button><button type="button" aria-pressed="false">Artificial turf</button></div></div>
+          <div><label class="lbl" for="m2">Area to cover</label><div class="m2"><input type="range" id="m2" min="10" max="500" step="5" value="60"><output id="m2o" for="m2">60 m²</output></div></div>
+          <div><span class="lbl" id="l-x">Extras</span><div class="seg" role="group" aria-labelledby="l-x" data-multi="1" data-k="extras"><button type="button" aria-pressed="false">Top soil</button><button type="button" aria-pressed="false">Laying</button><button type="button" aria-pressed="false">Irrigation</button><button type="button" aria-pressed="false">Water tank</button><button type="button" aria-pressed="false">Flowers &amp; trees</button></div></div>
+          <div><label class="lbl" for="area">Your suburb</label><input type="text" id="area" placeholder="e.g. Primrose, Germiston" autocomplete="address-level2"></div>
+          <div><span class="lbl" id="l-when">When?</span><div class="seg" role="group" aria-labelledby="l-when" data-k="when"><button type="button" aria-pressed="true">This week</button><button type="button" aria-pressed="false">Next week</button><button type="button" aria-pressed="false">Just pricing</button></div></div>
+          <button class="btn lime" type="submit">Send on WhatsApp</button>
+          <div class="done" id="done" role="status">This is a preview, so nothing was sent. On the live site this opens WhatsApp to 060 922 8882 with the message filled in.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="tag">How it works</span><h2>From bare soil to green.</h2></div></div>
+      <div class="how">
+        <div><h3>Ask for a quote</h3><p>Square metres and suburb, online or on WhatsApp.</p></div>
+        <div><h3>Confirm</h3><p>We send the price; you choose a delivery day.</p></div>
+        <div><h3>Delivered in 24 hours</h3><p>Fresh lawn, turf, soil or tanks at your gate.</p></div>
+        <div><h3>Enjoy it</h3><p>[Care tips and aftercare: your advice here.]</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="tag">Recent jobs</span><h2>Lawns we've laid.</h2></div><p>These tiles are stock photos. On the live site they become your own before-and-after shots, the thing that wins lawn jobs.</p></div>
+      <div class="gal">
+        <figure class="big"><img src="https://images.unsplash.com/photo-1544914379-806667cd9489?auto=format&fit=crop&w=1000&q=80" srcset="https://images.unsplash.com/photo-1544914379-806667cd9489?auto=format&fit=crop&w=560&q=75 560w, https://images.unsplash.com/photo-1544914379-806667cd9489?auto=format&fit=crop&w=1000&q=80 1000w, https://images.unsplash.com/photo-1544914379-806667cd9489?auto=format&fit=crop&w=1400&q=80 1400w" sizes="(max-width:820px) 100vw, 45vw" alt="Top view of a fresh green lawn (stock photo)" loading="lazy"><figcaption>Stock · your job photo here</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1542806136-b50e2a5b006f?auto=format&fit=crop&w=700&q=80" srcset="https://images.unsplash.com/photo-1542806136-b50e2a5b006f?auto=format&fit=crop&w=400&q=75 400w, https://images.unsplash.com/photo-1542806136-b50e2a5b006f?auto=format&fit=crop&w=700&q=80 700w, https://images.unsplash.com/photo-1542806136-b50e2a5b006f?auto=format&fit=crop&w=1000&q=80 1000w" sizes="(max-width:520px) 100vw, 28vw" alt="A garden sprinkler watering grass (stock photo)" loading="lazy"><figcaption>Irrigation · your photo here</figcaption></figure>
+        <div class="ba"><h3>Before &amp; after</h3><p>Show a bare yard next to the finished lawn. Customers trust results they can see.</p></div>
+        <figure><img src="https://images.unsplash.com/photo-1609311630949-72f6a4c2acbb?auto=format&fit=crop&w=700&q=80" srcset="https://images.unsplash.com/photo-1609311630949-72f6a4c2acbb?auto=format&fit=crop&w=400&q=75 400w, https://images.unsplash.com/photo-1609311630949-72f6a4c2acbb?auto=format&fit=crop&w=700&q=80 700w, https://images.unsplash.com/photo-1609311630949-72f6a4c2acbb?auto=format&fit=crop&w=1000&q=80 1000w" sizes="(max-width:520px) 100vw, 28vw" alt="A tree on a green lawn (stock photo)" loading="lazy"><figcaption>Trees · your photo here</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1458245201577-fc8a130b8829?auto=format&fit=crop&w=700&q=80" srcset="https://images.unsplash.com/photo-1458245201577-fc8a130b8829?auto=format&fit=crop&w=400&q=75 400w, https://images.unsplash.com/photo-1458245201577-fc8a130b8829?auto=format&fit=crop&w=700&q=80 700w, https://images.unsplash.com/photo-1458245201577-fc8a130b8829?auto=format&fit=crop&w=1000&q=80 1000w" sizes="(max-width:520px) 100vw, 28vw" alt="A lawnmower on green grass (stock photo)" loading="lazy"><figcaption>Lawn care · your photo here</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="tag">Talk to us</span><h2>Get your quote today.</h2></div></div>
+      <div class="contact">
+        <div class="ccard"><h3>Call or WhatsApp</h3><p><a href="tel:+27609228882">060 922 8882</a></p><p style="color:var(--muted);font-size:15px">[Confirm this is also your WhatsApp number]</p></div>
+        <div class="ccard"><h3>Email</h3><p><a href="mailto:grassparadiseprojects@gmail.com">grassparadiseprojects@gmail.com</a></p></div>
+        <div class="ccard"><h3>Where we deliver</h3><p>Germiston and [your delivery areas]</p><p style="color:var(--muted);font-size:15px">Hours: [your trading hours]</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="golive">
+        <div><h2>Like it? Go live before the summer rush.</h2><p>Go live for R1,299, then R199 a month for hosting, updates and support. Your quote builder starts sending you WhatsApp enquiries from day one.</p></div>
+        <div class="who"><b>Vusumuzi Nhlapo</b><br>SALVATOR ORBIS (PTY) LTD<br><a href="tel:+27721005611">072 100 5611</a><br><a href="mailto:salvatororbis94@gmail.com">salvatororbis94@gmail.com</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© Grass Paradise · Germiston</span><span>Products, phone and 24-hour delivery from your Gumtree ad · Photos: Unsplash</span></div></footer>
+
+<script>
+(function(){
+  document.querySelectorAll('img').forEach(function(img){img.addEventListener('error',function(){img.style.display='none';});});
+  var st={type:'Instant lawn',extras:[],when:'This week'};
+  var m2=document.getElementById('m2'),m2o=document.getElementById('m2o'),area=document.getElementById('area'),msg=document.getElementById('msg');
+  function render(){
+    m2o.textContent=m2.value+' m²';
+    msg.textContent='';
+    var lines=[['Hi Grass Paradise, I\'d like a free quote.',''],['Need: ',st.type],['Area: ',m2.value+' m²'],['Extras: ',st.extras.length?st.extras.join(', '):'none'],['Suburb: ',area.value.trim()||'[suburb]'],['When: ',st.when]];
+    lines.forEach(function(l,i){if(i)msg.append('\n');msg.append(l[0]);if(l[1]){var b=document.createElement('b');b.textContent=l[1];msg.append(b);}});
+  }
+  document.querySelectorAll('.seg').forEach(function(g){
+    var k=g.getAttribute('data-k'),multi=g.hasAttribute('data-multi');
+    g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+      if(multi){var on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',on?'true':'false');
+        st[k]=Array.prototype.filter.call(g.querySelectorAll('button'),function(x){return x.getAttribute('aria-pressed')==='true'}).map(function(x){return x.textContent});}
+      else{g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');st[k]=b.textContent;}
+      render();});
+  });
+  m2.addEventListener('input',render);area.addEventListener('input',render);
+  document.getElementById('qf').addEventListener('submit',function(e){e.preventDefault();document.getElementById('done').classList.add('show');});
+  render();
+})();
+</script>
+</body>
+</html>
