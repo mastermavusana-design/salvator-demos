@@ -9,6 +9,7 @@ Reference look: tyre-shop.co.za (a real South African tyre retailer). The site s
 - `design-system/style-a/template.html`: the master page. Copy it to `<slug>/index.html` and fill it in.
 - Live example: https://salvator-demos.mastermavusana.workers.dev/design-directions/a-retail-counter/ (De Desmond Mag Wheel and Tyres)
 - `design-system/stock-photos.md`: approved tyre and wheel stock photos.
+- `design-system/palettes.md`: the contrast-checked colour palettes; each sample uses a different one.
 - `design-system/README.md`: banned "Claude look" patterns and the rules that never change.
 
 ## Build steps
@@ -16,7 +17,7 @@ Reference look: tyre-shop.co.za (a real South African tyre retailer). The site s
 1. Copy `style-a/template.html` to `<slug>/index.html`. Keep it one self-contained file.
 2. Replace every `{{PLACEHOLDER}}` (name, short name, monogram, tagline, phone, tel, wa, street, suburb, city/postcode, place ID, rating, reviews, URL-encoded name/address). Search for `{{` before pushing; none may remain.
 3. Rewrite the copy that came from De Desmond to this shop's real facts: hero headline, the three ticks, the value strip, the service tiles, the FAQ answers, the hours table and footer line. The template's "Open 24 hours / Any hour" lines are De Desmond's; remove them unless the shop's listing says 24 hours.
-4. Colours: change only the `:root` tokens. `--navy` becomes the shop's main sign colour (dark enough for white text, contrast at least 4.5:1) and `--yellow` its highlight colour (dark text on it, at least 4.5:1). Keep `--green` for WhatsApp. If the shop has no clear colours, keep navy and yellow.
+4. Colours: every sample gets its OWN palette; never repeat colours across samples (Vusumuzi's rule). Pick from `palettes.md` (or a contrast-checked custom palette from the shop's own sign colours) by the rules there, paste the four values (`--main`, `--main-2`, `--hi`, `--tint`) into `:root`, and record the palette name on the mock. Navy/yellow belongs to the De Desmond example only. Keep `--green` for WhatsApp.
 5. Photos: the shop's own photos first; then `stock-photos.md`. Hero = a wide tyre/warehouse photo; tiles = tyres, mags, workshop. Caption stock "Your photo here".
 6. Prices: fill the `priceData` JSON block (see Prices below). Never invent prices.
 7. Services: only what the listing supports; anything else gets the `confirm` tag.
