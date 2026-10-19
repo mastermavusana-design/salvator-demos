@@ -13,6 +13,7 @@ Vusumuzi picked **Style A · Retail Counter** (reference: tyre-shop.co.za). All 
 | `style-a/template.html` | Master page with `{{PLACEHOLDERS}}`, copy per shop |
 | `stock-photos.md` | Approved tyre and wheel stock photos |
 | `palettes.md` | Colour palettes: same layout for every shop, but never the same colours twice |
+| `request-template.md` | Fill-in form Vusumuzi uses to request a site |
 | Live example | https://salvator-demos.mastermavusana.workers.dev/design-directions/a-retail-counter/ |
 
 The other two boards (B · Signwriter, C · Pit Lane) stay in `design-directions/` for reference only: https://salvator-demos.mastermavusana.workers.dev/design-directions/
