@@ -1,5 +1,7 @@
 # Website request (Style A)
 
+Interactive version that saves each request: **Site Request Desk**, https://claude.ai/artifact/LpvNtmuH5BHgeYNhCEEQ4F (database collection `requests`; status draft / ready / built).
+
 Copy this, fill in what you know, and send it to Bestie or Forge ("Build this site: …"). Leave a line blank or write "?" if you don't know; it shows as a [placeholder] on the site.
 
 ```
