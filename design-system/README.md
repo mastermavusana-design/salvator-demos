@@ -3,25 +3,18 @@
 The house style every SALVATOR ORBIS website, preview and app is built from.
 Forge, Bestie and any future build agent must read this file before designing anything.
 
-## Status (19 Oct 2026)
+## Status: Style A "Retail Counter" chosen (19 Oct 2026)
 
-**Choosing a direction.** Three direction boards, each built on De Desmond Mag Wheel and Tyres' real details:
+Vusumuzi picked **Style A · Retail Counter** (reference: tyre-shop.co.za). All new previews, websites and app screens use it.
 
-| Board | Link | Idea |
-|---|---|---|
-| A · Retail Counter | https://salvator-demos.mastermavusana.workers.dev/design-directions/a-retail-counter/ | Looks like a real SA tyre retailer (reference: tyre-shop.co.za). Navy + yellow, Roboto, hero tyre finder, product tiles, bottom app bar. |
-| B · Signwriter | https://salvator-demos.mastermavusana.workers.dev/design-directions/b-signwriter/ | Hand-painted shop-sign look. Flat red/yellow/blue, Passion One, phone number as hero, painted price board. |
-| C · Pit Lane | https://salvator-demos.mastermavusana.workers.dev/design-directions/c-pit-lane/ | Premium motorsport. Graphite + one signal colour, Saira Condensed, angled buttons, spec rows, quote configurator. |
+| File | What it is |
+|---|---|
+| `forge-design-skill.md` | The rules and build steps. Read this first. |
+| `style-a/template.html` | Master page with `{{PLACEHOLDERS}}`, copy per shop |
+| `stock-photos.md` | Approved tyre and wheel stock photos |
+| Live example | https://salvator-demos.mastermavusana.workers.dev/design-directions/a-retail-counter/ |
 
-Index of all three: https://salvator-demos.mastermavusana.workers.dev/design-directions/
-
-Once Vusumuzi picks (or mixes) a direction, this folder gets:
-
-- `kit.css`: the shared tokens and components every preview links to
-- `components.md`: the approved sections (header, hero, tyre finder, services, size guide, reviews, visit, offer strip, mobile bar) with copy-paste HTML
-- `forge-design-skill.md`: the step-by-step rules Forge follows
-
-Until then, new previews keep the current rules in Forge's task prompt, and must avoid everything in the banned list below.
+The other two boards (B · Signwriter, C · Pit Lane) stay in `design-directions/` for reference only: https://salvator-demos.mastermavusana.workers.dev/design-directions/
 
 ## Why this exists
 
