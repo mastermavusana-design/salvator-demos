@@ -36,10 +36,12 @@ Tokens: `--glow` (main signal), `--glow-2` (second signal), `--base` (page), `--
 | # | Name | --glow | --glow-2 | --base | --base-2 | Used by |
 |---|---|---|---|---|---|---|
 | D1 | Cyan / orange | #22E3F0 | #FF8A2A | #0B0E12 | #151A21 | Style D sample (De Desmond board) only |
-| D2 | Lime / amber | #B8F22E | #FFC23A | #0C100B | #161C14 | |
-| D3 | Ice blue / red | #6EC8FF | #FF5A5F | #0A0D14 | #141A26 | |
-| D4 | Violet / cyan | #C2A1FF | #3FE0D0 | #0E0B14 | #1A1524 | |
-| D5 | Gold / white | #FFD24A | #F2F2F2 | #0F0E0B | #1B1913 | |
+| D2 | Lime / amber | #B8F22E | #FFC23A | #0C100B | #161C14 | De Desmond style-d (21 Oct 2026) |
+| D3 | Ice blue / red | #6EC8FF | #FF5A5F | #0A0D14 | #141A26 | Karims style-d (21 Oct 2026) |
+| D4 | Violet / cyan | #C2A1FF | #3FE0D0 | #0E0B14 | #1A1524 | Synclaire style-d (21 Oct 2026) |
+| D5 | Gold / white | #FFD24A | #F2F2F2 | #0F0E0B | #1B1913 | Chris Kwifor style-d (21 Oct 2026) |
+| D6 | Teal / pink | #2EE6C5 | #FF7FC0 | #0A1112 | #131D1F | JF Tyres style-d (21 Oct 2026) |
+| D7 | Red / amber | #FF6B6B | #FFB547 | #120B0B | #1F1414 | SC Auto Fitment style-d (21 Oct 2026) |
 
 ## Style E · Open Sky palettes
 
@@ -48,9 +50,11 @@ Tokens: `--sky-1` (top of hero), `--sky-2` (middle), `--sky-3` (bottom/sunrise),
 | # | Name | --sky-1 | --sky-2 | --sky-3 | --deep | --deep-2 | Used by |
 |---|---|---|---|---|---|---|---|
 | E1 | Blue sky / sunrise | #1CC2EE | #BFEFFB | #FBC98E | #0D2A52 | #1B4A8A | Style E sample (De Desmond board) only |
-| E2 | Sea / sand | #3CCFC4 | #D3F5F1 | #FFE3A3 | #0B3B3A | #146B66 | |
-| E3 | Evening / coral | #FFB089 | #FFE3D1 | #FFD27A | #4A1D2E | #7A2E4A | |
-| E4 | Highveld green | #8EDBAA | #E3F6E9 | #FCE5A6 | #12382A | #1F6B4A | |
-| E5 | Storm / gold | #8FB3D9 | #E1ECF7 | #F7D27E | #1E2A3A | #34506F | |
+| E2 | Sea / sand | #3CCFC4 | #D3F5F1 | #FFE3A3 | #0B3B3A | #146B66 | De Desmond style-e (21 Oct 2026) |
+| E3 | Evening / coral | #FFB089 | #FFE3D1 | #FFD27A | #4A1D2E | #7A2E4A | Karims style-e (21 Oct 2026) |
+| E4 | Highveld green | #8EDBAA | #E3F6E9 | #FCE5A6 | #12382A | #1F6B4A | Synclaire style-e (21 Oct 2026) |
+| E5 | Storm / gold | #8FB3D9 | #E1ECF7 | #F7D27E | #1E2A3A | #34506F | Chris Kwifor style-e (21 Oct 2026) |
+| E6 | Lavender dusk | #A99BEA | #ECE8FB | #FFD9A8 | #2A1F5C | #4B3A99 | JF Tyres style-e (21 Oct 2026) |
+| E7 | Desert / clay | #F2B66B | #FCEBD4 | #FFD3B0 | #4A2A10 | #7A4A1F | SC Auto Fitment style-e (21 Oct 2026) |
 
 Same rule as Style A: no two samples share a palette; record it on the mock as e.g. `D2 lime-amber`. Check the contrast pairs before pushing a new palette.

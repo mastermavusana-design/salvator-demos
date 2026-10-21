@@ -8,6 +8,14 @@ Reference look: tyre-shop.co.za (a real South African tyre retailer). The site s
 
 Style A is still the default. Build in **Style D · Neon Night** or **Style E · Open Sky** only when Vusumuzi asks for it (in chat, a Site Request Desk request, or a lead's `style` field set to "D" or "E"). Then copy `style-d/template.html` or `style-e/template.html` instead and follow the same steps below; colours come from the D or E table in `palettes.md`; the photo band uses the matching SALVATOR ORBIS stock image from `stock-photos.md`. After any build, add the site to `review/index.html`.
 
+## Every tyre shop gets a style picker (Vusumuzi, 21 Oct 2026)
+
+Clients choose their own look. After building a shop's Style A preview at `<slug>/`, run from the repo root:
+
+`python3 design-system/tools/restyle.py <slug> <D palette> <E palette>`
+
+It makes `<slug>/style-d/` and `<slug>/style-e/` (same content, new look; pick unused D and E palettes from `palettes.md` and record them there) and the client picker at `<slug>/choose/` (each look with "View full site" and "I like this one", which opens WhatsApp to Vusumuzi with the choice). If an older design of the shop exists in git history, pass its commit as a 4th argument to restore it at `<slug>/v1/` and add it to the picker. Then add the shop to `review/index.html` as its own group (four versions + `picker` path). The link to send the client is `<slug>/choose/`.
+
 ## Files
 
 - `design-system/style-a/template.html`: the master page. Copy it to `<slug>/index.html` and fill it in.

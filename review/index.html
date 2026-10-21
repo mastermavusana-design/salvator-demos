@@ -43,6 +43,11 @@ h2{font:800 22px/1.1 var(--hd);text-transform:uppercase;margin:28px 0 4px}
 .acts a,.acts button{font:700 15px var(--bd);min-height:40px;padding:0 12px;border-radius:4px;display:inline-flex;align-items:center;text-decoration:none;cursor:pointer}
 .acts a{background:var(--hi);color:#fff;border:0}
 .acts button{background:#fff;color:var(--hi);border:1.5px solid var(--hi)}
+.pk{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px;font-weight:700}
+.pk a{color:var(--hi);word-break:break-all}
+.pk button,.pk a.wa{font:700 14px var(--bd);min-height:36px;padding:0 12px;border-radius:4px;cursor:pointer;display:inline-flex;align-items:center;text-decoration:none}
+.pk button{border:1.5px solid var(--hi);background:#fff;color:var(--hi)}
+.pk a.wa{background:#0B7A3E;color:#fff;word-break:normal}
 .phone{position:fixed;inset:0;z-index:20;background:rgba(10,12,16,.82);display:none;align-items:center;justify-content:center;padding:16px}
 .phone.on{display:flex}
 .phone .dev{background:#111;border-radius:28px;padding:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);display:flex;flex-direction:column;gap:8px;max-height:100%}
@@ -57,7 +62,7 @@ footer{color:var(--muted);font-size:14px;padding:30px 0 40px}
 <div class="bar"><div class="w" id="filters">
   <button type="button" aria-pressed="true" data-f="all">All</button>
   <button type="button" aria-pressed="false" data-f="styles">Design styles</button>
-  <button type="button" aria-pressed="false" data-f="tyres">Tyre shop previews</button>
+  <button type="button" aria-pressed="false" data-f="tyres">Tyre shops (all versions)</button>
   <button type="button" aria-pressed="false" data-f="other">Other trades</button>
   <span class="count" id="count"></span>
 </div></div>
@@ -67,33 +72,504 @@ footer{color:var(--muted);font-size:14px;padding:30px 0 40px}
 <div class="phone" id="phone" role="dialog" aria-modal="true" aria-label="Phone view"><div class="dev"><div class="top"><span id="phName"></span><button type="button" id="phClose">Close</button></div><iframe id="phFrame" title="Phone view"></iframe></div></div>
 
 <script type="application/json" id="sites">
-{"groups":[
-{"key":"styles","title":"Design styles","lead":"The house looks, all shown with De Desmond's public details so you can compare like for like. D and E are new, made from your two banner pictures.","items":[
- {"name":"D · Neon Night","path":"design-directions/d-neon-night/","tags":["New 21 Oct","From the dark neon banner"],"isNew":true,"colours":["#0B0E12","#22E3F0","#FF8A2A"],"sum":"Carbon black, glowing cyan and orange tyre tracks, wide italic headings. Off-road photo band."},
- {"name":"E · Open Sky","path":"design-directions/e-open-sky/","tags":["New 21 Oct","From the sky banner"],"isNew":true,"colours":["#1CC2EE","#FBC98E","#0D2A52"],"sum":"Blue-to-sunrise sky, deep navy type, a big tread swoosh, rounded buttons. Highway photo band."},
- {"name":"A · Retail Counter","path":"design-directions/a-retail-counter/","tags":["Current house style"],"colours":["#0A2A5E","#FFD200","#F1F3F6"],"sum":"Looks like a real SA tyre retailer (tyre-shop.co.za). All tyre previews since 19 Oct use it."},
- {"name":"B · Signwriter","path":"design-directions/b-signwriter/","tags":["Reference only"],"colours":["#C8211A","#FFC800","#1C3FAA"],"sum":"Hand-painted shop-sign look."},
- {"name":"C · Pit Lane","path":"design-directions/c-pit-lane/","tags":["Reference only"],"colours":["#0D0F12","#C8F000","#1C2027"],"sum":"Premium motorsport feel."}
-]},
-{"key":"tyres","title":"Tyre shop previews","lead":"Phase 1 leads, built in Style A, each in its own colours.","items":[
- {"name":"De Desmond Mag Wheel and Tyres","area":"Kensington","path":"de-desmond-mag-wheel-and-tyres/","status":"draft","tags":["Style A","Charcoal / orange"],"colours":["#2B2F36","#FF8A1F","#F2F2F3"]},
- {"name":"De Desmond Mag Wheel and Tyres (first version, 19 Oct)","area":"Kensington","path":"de-desmond-mag-wheel-and-tyres/v1/","status":"draft","tags":["Before Style A","Dark / yellow"],"colours":["#0E1116","#FFC23A","#F4F1EA"]},
- {"name":"Karims Tyre Wheel & Balance","area":"Kensington","path":"karims-tyre-wheel-and-balance/","status":"draft","tags":["Style A","Forest / lime"],"colours":["#1F5130","#C5E04A","#F0F5F0"]},
- {"name":"SC Auto Fitment Second Hand Tyres and Wheels Repair","area":"Kensington","path":"sc-auto-fitment-second-hand-tyres-and-wheels-repair/","status":"draft","tags":["Style A","Cobalt / sky"],"colours":["#1D3F94","#7FD1FF","#EFF3FB"]},
- {"name":"Synclaire Used Tyres Repairs","area":"Kensington","path":"synclaire-used-tyres-repairs/","status":"draft","tags":["Style A","Brick / butter"],"colours":["#9A3412","#FFD66B","#F8F1EE"]},
- {"name":"Chris Kwifor & Sons Tyre Center","area":"Fairview","path":"chris-kwifor-and-sons-tyre-center/","status":"draft","tags":["Style A","Petrol / sand"],"colours":["#0F4C5C","#F4C95D","#EEF4F5"]},
- {"name":"JF Tyres","area":"Fairview","path":"jf-tyres/","status":"draft","tags":["Style A","Black / red"],"colours":["#151515","#FF6B57","#F2F2F2"]}
-]},
-{"key":"other","title":"Other trades (before the automotive focus)","lead":"Built 9 to 19 Oct, before the Web Desk narrowed to car businesses.","items":[
- {"name":"Absolute Beauty Salon","area":"Robertsham","path":"absolute-beauty-salon/","status":"live","tags":["Salon"]},
- {"name":"Passario Art of Hair","area":"Benoni","path":"passario-art-of-hair/","status":"live","tags":["Salon"]},
- {"name":"E-K Plumbers","area":"Springs","path":"e-k-plumbers/","status":"live","tags":["Trades"]},
- {"name":"Shwageosi Electrical","area":"Soweto","path":"shwageosi-electrical-cc/","status":"live","tags":["Trades"]},
- {"name":"Grass Paradise","area":"Germiston","path":"grass-paradise/","status":"live","tags":["Garden"]},
- {"name":"Kwa-Mashobane","area":"Zondi, Soweto","path":"kwa-mashobane/","status":"live","tags":["Food"]},
- {"name":"Tshimangadzo Catering & Events","area":"Soweto","path":"tshimangadzo-catering-and-events-company/","status":"live","tags":["Events"]}
-]}
-]}
+{
+ "groups": [
+  {
+   "key": "styles",
+   "title": "Design styles",
+   "lead": "The house looks, all shown with De Desmond's public details so you can compare like for like. D and E are new, made from your two banner pictures.",
+   "items": [
+    {
+     "name": "D · Neon Night",
+     "path": "design-directions/d-neon-night/",
+     "tags": [
+      "New 21 Oct",
+      "From the dark neon banner"
+     ],
+     "isNew": true,
+     "colours": [
+      "#0B0E12",
+      "#22E3F0",
+      "#FF8A2A"
+     ],
+     "sum": "Carbon black, glowing cyan and orange tyre tracks, wide italic headings. Off-road photo band."
+    },
+    {
+     "name": "E · Open Sky",
+     "path": "design-directions/e-open-sky/",
+     "tags": [
+      "New 21 Oct",
+      "From the sky banner"
+     ],
+     "isNew": true,
+     "colours": [
+      "#1CC2EE",
+      "#FBC98E",
+      "#0D2A52"
+     ],
+     "sum": "Blue-to-sunrise sky, deep navy type, a big tread swoosh, rounded buttons. Highway photo band."
+    },
+    {
+     "name": "A · Retail Counter",
+     "path": "design-directions/a-retail-counter/",
+     "tags": [
+      "Current house style"
+     ],
+     "colours": [
+      "#0A2A5E",
+      "#FFD200",
+      "#F1F3F6"
+     ],
+     "sum": "Looks like a real SA tyre retailer (tyre-shop.co.za). All tyre previews since 19 Oct use it."
+    },
+    {
+     "name": "B · Signwriter",
+     "path": "design-directions/b-signwriter/",
+     "tags": [
+      "Reference only"
+     ],
+     "colours": [
+      "#C8211A",
+      "#FFC800",
+      "#1C3FAA"
+     ],
+     "sum": "Hand-painted shop-sign look."
+    },
+    {
+     "name": "C · Pit Lane",
+     "path": "design-directions/c-pit-lane/",
+     "tags": [
+      "Reference only"
+     ],
+     "colours": [
+      "#0D0F12",
+      "#C8F000",
+      "#1C2027"
+     ],
+     "sum": "Premium motorsport feel."
+    }
+   ]
+  },
+  {
+   "key": "tyres",
+   "title": "De Desmond Mag Wheel and Tyres · Kensington",
+   "picker": "de-desmond-mag-wheel-and-tyres/choose/",
+   "lead": "Four versions of this shop's site. Send the client the style picker link so they can choose.",
+   "items": [
+    {
+     "name": "Classic shop (Style A)",
+     "path": "de-desmond-mag-wheel-and-tyres/",
+     "status": "draft",
+     "tags": [
+      "Style A",
+      "Charcoal / orange"
+     ],
+     "colours": [
+      "#2B2F36",
+      "#FF8A1F",
+      "#F2F2F3"
+     ]
+    },
+    {
+     "name": "Neon night (Style D)",
+     "path": "de-desmond-mag-wheel-and-tyres/style-d/",
+     "tags": [
+      "New 21 Oct",
+      "Style D · Lime / amber"
+     ],
+     "isNew": true,
+     "colours": [
+      "#0C100B",
+      "#B8F22E",
+      "#FFC23A"
+     ]
+    },
+    {
+     "name": "Open sky (Style E)",
+     "path": "de-desmond-mag-wheel-and-tyres/style-e/",
+     "tags": [
+      "New 21 Oct",
+      "Style E · Sea / sand"
+     ],
+     "isNew": true,
+     "colours": [
+      "#3CCFC4",
+      "#FFE3A3",
+      "#0B3B3A"
+     ]
+    },
+    {
+     "name": "Made-for-you (first version, 19 Oct)",
+     "path": "de-desmond-mag-wheel-and-tyres/v1/",
+     "tags": [
+      "Restored",
+      "Before Style A"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "tyres",
+   "title": "Karims Tyre Wheel & Balance · Kensington",
+   "picker": "karims-tyre-wheel-and-balance/choose/",
+   "lead": "Four versions of this shop's site. Send the client the style picker link so they can choose.",
+   "items": [
+    {
+     "name": "Classic shop (Style A)",
+     "path": "karims-tyre-wheel-and-balance/",
+     "status": "draft",
+     "tags": [
+      "Style A",
+      "Forest / lime"
+     ],
+     "colours": [
+      "#1F5130",
+      "#C5E04A",
+      "#F0F5F0"
+     ]
+    },
+    {
+     "name": "Neon night (Style D)",
+     "path": "karims-tyre-wheel-and-balance/style-d/",
+     "tags": [
+      "New 21 Oct",
+      "Style D · Ice blue / red"
+     ],
+     "isNew": true,
+     "colours": [
+      "#0A0D14",
+      "#6EC8FF",
+      "#FF5A5F"
+     ]
+    },
+    {
+     "name": "Open sky (Style E)",
+     "path": "karims-tyre-wheel-and-balance/style-e/",
+     "tags": [
+      "New 21 Oct",
+      "Style E · Evening / coral"
+     ],
+     "isNew": true,
+     "colours": [
+      "#FFB089",
+      "#FFD27A",
+      "#4A1D2E"
+     ]
+    },
+    {
+     "name": "Made-for-you (first version, 19 Oct)",
+     "path": "karims-tyre-wheel-and-balance/v1/",
+     "tags": [
+      "Restored",
+      "Before Style A"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "tyres",
+   "title": "Synclaire Used Tyres Repairs · Kensington",
+   "picker": "synclaire-used-tyres-repairs/choose/",
+   "lead": "Four versions of this shop's site. Send the client the style picker link so they can choose.",
+   "items": [
+    {
+     "name": "Classic shop (Style A)",
+     "path": "synclaire-used-tyres-repairs/",
+     "status": "draft",
+     "tags": [
+      "Style A",
+      "Brick / butter"
+     ],
+     "colours": [
+      "#9A3412",
+      "#FFD66B",
+      "#F8F1EE"
+     ]
+    },
+    {
+     "name": "Neon night (Style D)",
+     "path": "synclaire-used-tyres-repairs/style-d/",
+     "tags": [
+      "New 21 Oct",
+      "Style D · Violet / cyan"
+     ],
+     "isNew": true,
+     "colours": [
+      "#0E0B14",
+      "#C2A1FF",
+      "#3FE0D0"
+     ]
+    },
+    {
+     "name": "Open sky (Style E)",
+     "path": "synclaire-used-tyres-repairs/style-e/",
+     "tags": [
+      "New 21 Oct",
+      "Style E · Highveld green"
+     ],
+     "isNew": true,
+     "colours": [
+      "#8EDBAA",
+      "#FCE5A6",
+      "#12382A"
+     ]
+    },
+    {
+     "name": "Made-for-you (first version, 19 Oct)",
+     "path": "synclaire-used-tyres-repairs/v1/",
+     "tags": [
+      "Restored",
+      "Before Style A"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "tyres",
+   "title": "Chris Kwifor & Sons Tyre Center · Fairview",
+   "picker": "chris-kwifor-and-sons-tyre-center/choose/",
+   "lead": "Four versions of this shop's site. Send the client the style picker link so they can choose.",
+   "items": [
+    {
+     "name": "Classic shop (Style A)",
+     "path": "chris-kwifor-and-sons-tyre-center/",
+     "status": "draft",
+     "tags": [
+      "Style A",
+      "Petrol / sand"
+     ],
+     "colours": [
+      "#0F4C5C",
+      "#F4C95D",
+      "#EEF4F5"
+     ]
+    },
+    {
+     "name": "Neon night (Style D)",
+     "path": "chris-kwifor-and-sons-tyre-center/style-d/",
+     "tags": [
+      "New 21 Oct",
+      "Style D · Gold / white"
+     ],
+     "isNew": true,
+     "colours": [
+      "#0F0E0B",
+      "#FFD24A",
+      "#F2F2F2"
+     ]
+    },
+    {
+     "name": "Open sky (Style E)",
+     "path": "chris-kwifor-and-sons-tyre-center/style-e/",
+     "tags": [
+      "New 21 Oct",
+      "Style E · Storm / gold"
+     ],
+     "isNew": true,
+     "colours": [
+      "#8FB3D9",
+      "#F7D27E",
+      "#1E2A3A"
+     ]
+    },
+    {
+     "name": "Made-for-you (first version, 19 Oct)",
+     "path": "chris-kwifor-and-sons-tyre-center/v1/",
+     "tags": [
+      "Restored",
+      "Before Style A"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "tyres",
+   "title": "JF Tyres · Fairview",
+   "picker": "jf-tyres/choose/",
+   "lead": "Four versions of this shop's site. Send the client the style picker link so they can choose.",
+   "items": [
+    {
+     "name": "Classic shop (Style A)",
+     "path": "jf-tyres/",
+     "status": "draft",
+     "tags": [
+      "Style A",
+      "Black / red"
+     ],
+     "colours": [
+      "#151515",
+      "#FF6B57",
+      "#F2F2F2"
+     ]
+    },
+    {
+     "name": "Neon night (Style D)",
+     "path": "jf-tyres/style-d/",
+     "tags": [
+      "New 21 Oct",
+      "Style D · Teal / pink"
+     ],
+     "isNew": true,
+     "colours": [
+      "#0A1112",
+      "#2EE6C5",
+      "#FF7FC0"
+     ]
+    },
+    {
+     "name": "Open sky (Style E)",
+     "path": "jf-tyres/style-e/",
+     "tags": [
+      "New 21 Oct",
+      "Style E · Lavender dusk"
+     ],
+     "isNew": true,
+     "colours": [
+      "#A99BEA",
+      "#FFD9A8",
+      "#2A1F5C"
+     ]
+    },
+    {
+     "name": "Made-for-you (first version, 19 Oct)",
+     "path": "jf-tyres/v1/",
+     "tags": [
+      "Restored",
+      "Before Style A"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "tyres",
+   "title": "SC Auto Fitment Second Hand Tyres and Wheels Repair · Kensington",
+   "picker": "sc-auto-fitment-second-hand-tyres-and-wheels-repair/choose/",
+   "lead": "Four versions of this shop's site. Send the client the style picker link so they can choose.",
+   "items": [
+    {
+     "name": "Classic shop (Style A)",
+     "path": "sc-auto-fitment-second-hand-tyres-and-wheels-repair/",
+     "status": "draft",
+     "tags": [
+      "Style A",
+      "Cobalt / sky"
+     ],
+     "colours": [
+      "#1D3F94",
+      "#7FD1FF",
+      "#EFF3FB"
+     ]
+    },
+    {
+     "name": "Neon night (Style D)",
+     "path": "sc-auto-fitment-second-hand-tyres-and-wheels-repair/style-d/",
+     "tags": [
+      "New 21 Oct",
+      "Style D · Red / amber"
+     ],
+     "isNew": true,
+     "colours": [
+      "#120B0B",
+      "#FF6B6B",
+      "#FFB547"
+     ]
+    },
+    {
+     "name": "Open sky (Style E)",
+     "path": "sc-auto-fitment-second-hand-tyres-and-wheels-repair/style-e/",
+     "tags": [
+      "New 21 Oct",
+      "Style E · Desert / clay"
+     ],
+     "isNew": true,
+     "colours": [
+      "#F2B66B",
+      "#FFD3B0",
+      "#4A2A10"
+     ]
+    },
+    {
+     "name": "Made-for-you (first version, 19 Oct)",
+     "path": "sc-auto-fitment-second-hand-tyres-and-wheels-repair/v1/",
+     "tags": [
+      "Restored",
+      "Before Style A"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "other",
+   "title": "Other trades (before the automotive focus)",
+   "lead": "Built 9 to 19 Oct, before the Web Desk narrowed to car businesses.",
+   "items": [
+    {
+     "name": "Absolute Beauty Salon",
+     "area": "Robertsham",
+     "path": "absolute-beauty-salon/",
+     "status": "live",
+     "tags": [
+      "Salon"
+     ]
+    },
+    {
+     "name": "Passario Art of Hair",
+     "area": "Benoni",
+     "path": "passario-art-of-hair/",
+     "status": "live",
+     "tags": [
+      "Salon"
+     ]
+    },
+    {
+     "name": "E-K Plumbers",
+     "area": "Springs",
+     "path": "e-k-plumbers/",
+     "status": "live",
+     "tags": [
+      "Trades"
+     ]
+    },
+    {
+     "name": "Shwageosi Electrical",
+     "area": "Soweto",
+     "path": "shwageosi-electrical-cc/",
+     "status": "live",
+     "tags": [
+      "Trades"
+     ]
+    },
+    {
+     "name": "Grass Paradise",
+     "area": "Germiston",
+     "path": "grass-paradise/",
+     "status": "live",
+     "tags": [
+      "Garden"
+     ]
+    },
+    {
+     "name": "Kwa-Mashobane",
+     "area": "Zondi, Soweto",
+     "path": "kwa-mashobane/",
+     "status": "live",
+     "tags": [
+      "Food"
+     ]
+    },
+    {
+     "name": "Tshimangadzo Catering & Events",
+     "area": "Soweto",
+     "path": "tshimangadzo-catering-and-events-company/",
+     "status": "live",
+     "tags": [
+      "Events"
+     ]
+    }
+   ]
+  }
+ ]
+}
 </script>
 <script>
 (function(){
@@ -122,6 +598,10 @@ footer{color:var(--muted);font-size:14px;padding:30px 0 40px}
     D.groups.forEach(function(g){
       if(filt!='all'&&filt!=g.key)return;
       main.appendChild(el('h2',null,g.title));main.appendChild(el('p','lead',g.lead));
+      if(g.picker){var pk=el('p','pk'),u=BASE+g.picker,l=el('a',null,'Client style picker: '+u);l.href=u;l.target='_blank';l.rel='noopener';
+        var cb=el('button',null,'Copy link');cb.type='button';cb.addEventListener('click',function(){try{navigator.clipboard.writeText(u);cb.textContent='Copied';}catch(e){cb.textContent='Copy failed';}setTimeout(function(){cb.textContent='Copy link'},1800);});
+        var wb=el('a','wa','Send on WhatsApp');wb.href='https://wa.me/?text='+encodeURIComponent('Here are a few looks for your website. Tap one to view it, then tell me which you like: '+u);wb.target='_blank';wb.rel='noopener';
+        pk.append(l,cb,wb);main.appendChild(pk);}
       var gr=el('div','grid');g.items.forEach(function(it){gr.appendChild(card(it));n++;});main.appendChild(gr);
     });
     document.getElementById('count').textContent=n+' sites';
