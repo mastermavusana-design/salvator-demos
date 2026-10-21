@@ -4,6 +4,10 @@ Chosen by Vusumuzi on 19 Oct 2026. Every new SALVATOR ORBIS preview, website and
 
 Reference look: tyre-shop.co.za (a real South African tyre retailer). The site should feel like a real shop, not a designed portfolio.
 
+## Styles D and E (added 21 Oct 2026)
+
+Style A is still the default. Build in **Style D · Neon Night** or **Style E · Open Sky** only when Vusumuzi asks for it (in chat, a Site Request Desk request, or a lead's `style` field set to "D" or "E"). Then copy `style-d/template.html` or `style-e/template.html` instead and follow the same steps below; colours come from the D or E table in `palettes.md`; the photo band uses the matching SALVATOR ORBIS stock image from `stock-photos.md`. After any build, add the site to `review/index.html`.
+
 ## Files
 
 - `design-system/style-a/template.html`: the master page. Copy it to `<slug>/index.html` and fill it in.

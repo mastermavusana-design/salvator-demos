@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SALVATOR ORBIS · Review all websites</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;800&family=Roboto:wght@400;500;700&display=swap">
+<style>
+:root{--ink:#16191F;--muted:#4A515E;--line:#D9DEE6;--bg:#F3F4F6;--card:#fff;--hi:#0A2A5E;--hd:"Roboto Condensed",Arial,sans-serif;--bd:Roboto,Arial,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 var(--bd)}
+header{background:#111;color:#F2F2F2}
+header .w{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between;padding-block:18px}
+h1{font:800 28px/1.1 var(--hd);text-transform:uppercase;margin:0}
+header p{margin:0;color:#CFCFCF;font-size:15px}
+.w{max-width:1280px;margin:0 auto;padding:0 16px}
+.bar{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line)}
+.bar .w{display:flex;gap:6px;flex-wrap:wrap;padding-block:10px;align-items:center}
+.bar button{font:500 15px var(--bd);min-height:40px;padding:0 14px;border:1.5px solid var(--line);background:#fff;border-radius:4px;cursor:pointer;color:var(--ink)}
+.bar button[aria-pressed="true"]{background:var(--hi);border-color:var(--hi);color:#fff}
+.bar .count{margin-left:auto;color:var(--muted);font-size:15px}
+h2{font:800 22px/1.1 var(--hd);text-transform:uppercase;margin:28px 0 4px}
+.lead{color:var(--muted);margin:0 0 14px;max-width:80ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:#E6E9EE;border-bottom:1px solid var(--line)}
+.thumb iframe{position:absolute;left:0;top:0;width:1280px;height:800px;border:0;transform-origin:0 0;pointer-events:none}
+.thumb a{position:absolute;inset:0}
+.tx{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tx h3{font:700 19px/1.15 var(--hd);margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:13px;font-weight:700;padding:2px 7px;border-radius:2px;background:#EEF1F5;color:#2E3540}
+.tag.new{background:#FFE9C7;color:#7A3B00}
+.tag.st-live{background:#DDF3E6;color:#0B5A2E}
+.tag.st-draft{background:#EEF1F5;color:#2E3540}
+.sw{display:inline-flex;gap:2px;vertical-align:middle}
+.sw i{width:14px;height:14px;border-radius:2px;display:block;border:1px solid rgba(0,0,0,.15)}
+.sum{color:var(--muted);font-size:14px;margin:0}
+.acts{margin-top:auto;padding-top:6px;display:flex;gap:8px}
+.acts a,.acts button{font:700 15px var(--bd);min-height:40px;padding:0 12px;border-radius:4px;display:inline-flex;align-items:center;text-decoration:none;cursor:pointer}
+.acts a{background:var(--hi);color:#fff;border:0}
+.acts button{background:#fff;color:var(--hi);border:1.5px solid var(--hi)}
+.phone{position:fixed;inset:0;z-index:20;background:rgba(10,12,16,.82);display:none;align-items:center;justify-content:center;padding:16px}
+.phone.on{display:flex}
+.phone .dev{background:#111;border-radius:28px;padding:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);display:flex;flex-direction:column;gap:8px;max-height:100%}
+.phone .top{display:flex;justify-content:space-between;align-items:center;color:#fff;font-weight:700;padding:0 6px}
+.phone .top button{background:#fff;color:#111;border:0;border-radius:4px;min-height:36px;padding:0 12px;font:700 15px var(--bd);cursor:pointer}
+.phone iframe{width:390px;max-width:calc(100vw - 56px);height:min(780px,calc(100vh - 110px));border:0;border-radius:18px;background:#fff}
+footer{color:var(--muted);font-size:14px;padding:30px 0 40px}
+</style>
+</head>
+<body>
+<header><div class="w"><h1>All websites · review</h1><p>Private review page for Vusumuzi. Not indexed by search engines; don't send this link to clients.</p></div></header>
+<div class="bar"><div class="w" id="filters">
+  <button type="button" aria-pressed="true" data-f="all">All</button>
+  <button type="button" aria-pressed="false" data-f="styles">Design styles</button>
+  <button type="button" aria-pressed="false" data-f="tyres">Tyre shop previews</button>
+  <button type="button" aria-pressed="false" data-f="other">Other trades</button>
+  <span class="count" id="count"></span>
+</div></div>
+<main class="w" id="main"></main>
+<footer class="w">Previews live at salvator-demos.mastermavusana.workers.dev/&lt;shop&gt;/. Every push to the repo updates them. Forge adds new previews here when it builds them.</footer>
+
+<div class="phone" id="phone" role="dialog" aria-modal="true" aria-label="Phone view"><div class="dev"><div class="top"><span id="phName"></span><button type="button" id="phClose">Close</button></div><iframe id="phFrame" title="Phone view"></iframe></div></div>
+
+<script type="application/json" id="sites">
+{"groups":[
+{"key":"styles","title":"Design styles","lead":"The house looks, all shown with De Desmond's public details so you can compare like for like. D and E are new, made from your two banner pictures.","items":[
+ {"name":"D · Neon Night","path":"design-directions/d-neon-night/","tags":["New 21 Oct","From the dark neon banner"],"isNew":true,"colours":["#0B0E12","#22E3F0","#FF8A2A"],"sum":"Carbon black, glowing cyan and orange tyre tracks, wide italic headings. Off-road photo band."},
+ {"name":"E · Open Sky","path":"design-directions/e-open-sky/","tags":["New 21 Oct","From the sky banner"],"isNew":true,"colours":["#1CC2EE","#FBC98E","#0D2A52"],"sum":"Blue-to-sunrise sky, deep navy type, a big tread swoosh, rounded buttons. Highway photo band."},
+ {"name":"A · Retail Counter","path":"design-directions/a-retail-counter/","tags":["Current house style"],"colours":["#0A2A5E","#FFD200","#F1F3F6"],"sum":"Looks like a real SA tyre retailer (tyre-shop.co.za). All tyre previews since 19 Oct use it."},
+ {"name":"B · Signwriter","path":"design-directions/b-signwriter/","tags":["Reference only"],"colours":["#C8211A","#FFC800","#1C3FAA"],"sum":"Hand-painted shop-sign look."},
+ {"name":"C · Pit Lane","path":"design-directions/c-pit-lane/","tags":["Reference only"],"colours":["#0D0F12","#C8F000","#1C2027"],"sum":"Premium motorsport feel."}
+]},
+{"key":"tyres","title":"Tyre shop previews","lead":"Phase 1 leads, built in Style A, each in its own colours.","items":[
+ {"name":"De Desmond Mag Wheel and Tyres","area":"Kensington","path":"de-desmond-mag-wheel-and-tyres/","status":"draft","tags":["Style A","Charcoal / orange"],"colours":["#2B2F36","#FF8A1F","#F2F2F3"]},
+ {"name":"Karims Tyre Wheel & Balance","area":"Kensington","path":"karims-tyre-wheel-and-balance/","status":"draft","tags":["Style A","Forest / lime"],"colours":["#1F5130","#C5E04A","#F0F5F0"]},
+ {"name":"SC Auto Fitment Second Hand Tyres and Wheels Repair","area":"Kensington","path":"sc-auto-fitment-second-hand-tyres-and-wheels-repair/","status":"draft","tags":["Style A","Cobalt / sky"],"colours":["#1D3F94","#7FD1FF","#EFF3FB"]},
+ {"name":"Synclaire Used Tyres Repairs","area":"Kensington","path":"synclaire-used-tyres-repairs/","status":"draft","tags":["Style A","Brick / butter"],"colours":["#9A3412","#FFD66B","#F8F1EE"]},
+ {"name":"Chris Kwifor & Sons Tyre Center","area":"Fairview","path":"chris-kwifor-and-sons-tyre-center/","status":"draft","tags":["Style A","Petrol / sand"],"colours":["#0F4C5C","#F4C95D","#EEF4F5"]},
+ {"name":"JF Tyres","area":"Fairview","path":"jf-tyres/","status":"draft","tags":["Style A","Black / red"],"colours":["#151515","#FF6B57","#F2F2F2"]}
+]},
+{"key":"other","title":"Other trades (before the automotive focus)","lead":"Built 9 to 19 Oct, before the Web Desk narrowed to car businesses.","items":[
+ {"name":"Absolute Beauty Salon","area":"Robertsham","path":"absolute-beauty-salon/","status":"live","tags":["Salon"]},
+ {"name":"Passario Art of Hair","area":"Benoni","path":"passario-art-of-hair/","status":"live","tags":["Salon"]},
+ {"name":"E-K Plumbers","area":"Springs","path":"e-k-plumbers/","status":"live","tags":["Trades"]},
+ {"name":"Shwageosi Electrical","area":"Soweto","path":"shwageosi-electrical-cc/","status":"live","tags":["Trades"]},
+ {"name":"Grass Paradise","area":"Germiston","path":"grass-paradise/","status":"live","tags":["Garden"]},
+ {"name":"Kwa-Mashobane","area":"Zondi, Soweto","path":"kwa-mashobane/","status":"live","tags":["Food"]},
+ {"name":"Tshimangadzo Catering & Events","area":"Soweto","path":"tshimangadzo-catering-and-events-company/","status":"live","tags":["Events"]}
+]}
+]}
+</script>
+<script>
+(function(){
+  var D=JSON.parse(document.getElementById('sites').textContent),main=document.getElementById('main'),filt='all';
+  var BASE=location.origin+'/';
+  function el(t,c,txt){var e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e;}
+  function card(it){
+    var url=BASE+it.path,c=el('article','card');
+    var th=el('div','thumb'),fr=document.createElement('iframe');fr.loading='lazy';fr.tabIndex=-1;fr.title='Preview of '+it.name;fr.setAttribute('aria-hidden','true');fr.src=url;
+    var a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.setAttribute('aria-label','Open '+it.name);
+    th.append(fr,a);c.appendChild(th);
+    var tx=el('div','tx');tx.appendChild(el('h3',null,it.name));
+    var m=el('div','meta');
+    if(it.area)m.appendChild(el('span','tag',it.area));
+    (it.tags||[]).forEach(function(t,i){m.appendChild(el('span','tag'+(it.isNew&&i==0?' new':''),t));});
+    if(it.status)m.appendChild(el('span','tag st-'+it.status,it.status=='live'?'Live link':'Built'));
+    if(it.colours){var s=el('span','sw');it.colours.forEach(function(h){var i=el('i');i.style.background=h;s.appendChild(i);});m.appendChild(s);}
+    tx.appendChild(m);
+    if(it.sum)tx.appendChild(el('p','sum',it.sum));
+    var ac=el('div','acts'),o=el('a',null,'Open');o.href=url;o.target='_blank';o.rel='noopener';
+    var ph=el('button',null,'Phone view');ph.type='button';ph.addEventListener('click',function(){openPhone(it.name,url)});
+    ac.append(o,ph);tx.appendChild(ac);c.appendChild(tx);return c;
+  }
+  function render(){
+    main.textContent='';var n=0;
+    D.groups.forEach(function(g){
+      if(filt!='all'&&filt!=g.key)return;
+      main.appendChild(el('h2',null,g.title));main.appendChild(el('p','lead',g.lead));
+      var gr=el('div','grid');g.items.forEach(function(it){gr.appendChild(card(it));n++;});main.appendChild(gr);
+    });
+    document.getElementById('count').textContent=n+' sites';
+    fit();
+  }
+  function fit(){document.querySelectorAll('.thumb').forEach(function(t){var f=t.querySelector('iframe');f.style.transform='scale('+(t.clientWidth/1280)+')';});}
+  window.addEventListener('resize',fit);
+  document.getElementById('filters').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;document.querySelectorAll('#filters button').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');filt=b.dataset.f;render();});
+  var P=document.getElementById('phone'),PF=document.getElementById('phFrame');
+  function openPhone(n,u){document.getElementById('phName').textContent=n;PF.src=u;P.classList.add('on');document.getElementById('phClose').focus();}
+  function close(){P.classList.remove('on');PF.src='about:blank';}
+  document.getElementById('phClose').addEventListener('click',close);
+  P.addEventListener('click',function(e){if(e.target===P)close();});
+  document.addEventListener('keydown',function(e){if(e.key=='Escape')close();});
+  render();
+})();
+</script>
+</body>
+</html>

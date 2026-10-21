@@ -9,6 +9,19 @@ How to request a size:
 
 Before first use, open the photo once and check: no chain-store signage, no big manufacturer logo filling the frame, no people who look like they're working unsafely, nothing that looks like a junk yard. If it fails, mark it ✗ here.
 
+## SALVATOR ORBIS stock images (AI-generated, approved by Vusumuzi 21 Oct 2026)
+
+Hosted in this repo, so they always load. Brand names on the tyres, wheel and brake calliper are blurred out. Use them as hero or photo-band backgrounds only, label them "Stock image · your photo here", and never present them as the shop's own work or premises. Footer credit: "Some photos: Unsplash/Pexels and SALVATOR ORBIS stock images".
+
+| File | What it shows | Best in |
+|---|---|---|
+| `design-system/photos/offroad-1376.jpg` (+ `-800`) | Muddy 4x4 on a rocky mountain track at sunset | Style D photo band, 4x4/bakkie shops |
+| `design-system/photos/highway-1376.jpg` (+ `-800`) | Car wheel at speed on a coastal road | Style E photo band, any car tyre shop |
+
+Live URL: `https://salvator-demos.mastermavusana.workers.dev/design-system/photos/<file>`. Request with `srcset` (800w, 1376w).
+
+Not approved from the same batch (21 Oct 2026): the two "Apex Tyres" banners (a made-up brand with text and menus baked in; used only as the design reference for Styles D and E) and the Pirelli P Zero / Michelin CrossClimate product shots (only for a shop that confirms it sells those brands, and then ask Vusumuzi first).
+
 ## Hero / wide banners
 
 | Source | ID | What it shows |

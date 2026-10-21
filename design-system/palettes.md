@@ -28,3 +28,29 @@ All palettes below are contrast-checked: white text on `--main` and `--main-2` a
 5. Paste the four values into the `:root` block of the page and write the palette name into the mock record (`palette`) and the "Used by" column here.
 
 `--green` (#0B7A3E, WhatsApp) never changes.
+
+## Style D · Neon Night palettes
+
+Tokens: `--glow` (main signal), `--glow-2` (second signal), `--base` (page), `--base-2` (panels). Both glows must reach at least 4.5:1 on `--base` (these all reach 6:1 or more); text stays white/#C3CDD6.
+
+| # | Name | --glow | --glow-2 | --base | --base-2 | Used by |
+|---|---|---|---|---|---|---|
+| D1 | Cyan / orange | #22E3F0 | #FF8A2A | #0B0E12 | #151A21 | Style D sample (De Desmond board) only |
+| D2 | Lime / amber | #B8F22E | #FFC23A | #0C100B | #161C14 | |
+| D3 | Ice blue / red | #6EC8FF | #FF5A5F | #0A0D14 | #141A26 | |
+| D4 | Violet / cyan | #C2A1FF | #3FE0D0 | #0E0B14 | #1A1524 | |
+| D5 | Gold / white | #FFD24A | #F2F2F2 | #0F0E0B | #1B1913 | |
+
+## Style E · Open Sky palettes
+
+Tokens: `--sky-1` (top of hero), `--sky-2` (middle), `--sky-3` (bottom/sunrise), `--deep` (headings, buttons), `--deep-2` (links). `--deep` must reach 4.5:1 on `--sky-1` and 7:1 on white.
+
+| # | Name | --sky-1 | --sky-2 | --sky-3 | --deep | --deep-2 | Used by |
+|---|---|---|---|---|---|---|---|
+| E1 | Blue sky / sunrise | #1CC2EE | #BFEFFB | #FBC98E | #0D2A52 | #1B4A8A | Style E sample (De Desmond board) only |
+| E2 | Sea / sand | #3CCFC4 | #D3F5F1 | #FFE3A3 | #0B3B3A | #146B66 | |
+| E3 | Evening / coral | #FFB089 | #FFE3D1 | #FFD27A | #4A1D2E | #7A2E4A | |
+| E4 | Highveld green | #8EDBAA | #E3F6E9 | #FCE5A6 | #12382A | #1F6B4A | |
+| E5 | Storm / gold | #8FB3D9 | #E1ECF7 | #F7D27E | #1E2A3A | #34506F | |
+
+Same rule as Style A: no two samples share a palette; record it on the mock as e.g. `D2 lime-amber`. Check the contrast pairs before pushing a new palette.

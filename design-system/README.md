@@ -18,6 +18,21 @@ Vusumuzi picked **Style A · Retail Counter** (reference: tyre-shop.co.za). All 
 
 The other two boards (B · Signwriter, C · Pit Lane) stay in `design-directions/` for reference only: https://salvator-demos.mastermavusana.workers.dev/design-directions/
 
+## New 21 Oct 2026: Styles D and E (from Vusumuzi's banner pictures), for review
+
+Built from the two banner images in `C:\Dev\Bestie\Website Pictures\Tyres`. Same section order and working parts as Style A (tyre finder, price list, FAQ, map, bottom bar); only the look changes. **Style A stays the default** until Vusumuzi picks D or E for a shop, or makes one the house style.
+
+| Style | Look | Sample | Template |
+|---|---|---|---|
+| D · Neon Night | Carbon black, glowing tyre tracks in two signal colours, Saira italic headings, off-road photo band | https://salvator-demos.mastermavusana.workers.dev/design-directions/d-neon-night/ | `style-d/template.html` |
+| E · Open Sky | Sky gradient (blue into sunrise), deep navy Montserrat headings, big tread swoosh, rounded buttons, highway photo band | https://salvator-demos.mastermavusana.workers.dev/design-directions/e-open-sky/ | `style-e/template.html` |
+
+Allowed exceptions, because Vusumuzi asked for these looks: D may use glowing lines and the tyre-track art (still no glowing blobs or gradient text); E may use rounded buttons and chips. Fonts: D = Saira (italic 700/800) + Roboto; E = Montserrat 700/800 + Roboto. Palettes for D and E are in `palettes.md`.
+
+## Review page
+
+Every sample and preview, with live thumbnails and a phone view: https://salvator-demos.mastermavusana.workers.dev/review/ (private to Vusumuzi; never send it to clients). Whoever builds a new preview adds a line to the `sites` JSON in `review/index.html`.
+
 ## Why this exists
 
 Vusumuzi doesn't want the sites to look "built by Claude". The giveaway patterns are listed below. They are banned in all new work.
@@ -40,6 +55,6 @@ Vusumuzi doesn't want the sites to look "built by Claude". The giveaway patterns
 - Mobile first; phone, WhatsApp and directions reachable with one thumb on every screen.
 - Body text 17px or more; muted text no lighter than #4A403D on light, no darker than #E2D6CA on dark; check contrast before pushing.
 - Only published facts; `R[ — ]`, `[your brands]`, `[confirm]` for unknowns; never invented reviews, prices, brands, awards or staff.
-- Stock photos are labelled as stock; never AI images, never other businesses' photos or chain signage.
+- Stock photos are labelled as stock; AI images only from the approved "SALVATOR ORBIS stock images" list in `stock-photos.md` (never new AI images, never AI images of people or of a shop's premises); never other businesses' photos or chain signage.
 - Previews carry the preview ribbon and `noindex, nofollow`.
 - Each shop gets its own colours (taken from its real sign or listing photos) inside the chosen direction's structure.
